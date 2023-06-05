@@ -11,7 +11,9 @@ public class US08_TC01_Derya {
         @Test
         public void Test01() throws InterruptedException {
 
-            //Sayfaya gidilir...
+            //ADRES BİLGİLERİNİN GÖRUNURLUGU DOGRULANIR
+
+            //Sayfaya gidilir.
             Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
 
             //Sayfanın Footer bölümüne inilir
@@ -27,12 +29,12 @@ public class US08_TC01_Derya {
             System.out.println(tripandwayPages.adressBilgisi.getText());
             Thread.sleep(3000);
 
-            //Telefon bilgisinin görünür oldugu dogrulanır
+            //Telefon bilgisinin görünür oldugu dogrulanır..
             softAssert.assertTrue(tripandwayPages.telefonBilgisi.isDisplayed());
             System.out.println(tripandwayPages.telefonBilgisi.getText());
             Thread.sleep(2000);
 
-            //e-mail bilgisinin görünür oldugu dogrulanır
+            //e-mail bilgisinin görünür oldugu dogrulanır...
             softAssert.assertTrue(tripandwayPages.emailBilgisi.isDisplayed());
             System.out.println(tripandwayPages.emailBilgisi.getText());
             softAssert.assertAll();
