@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.tripandwayPage;
+import pages.TripandwayPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -22,7 +22,7 @@ public class US06_TC01_Derya {
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
 
         //Sayfanın Footer bölümüne inilir
-        tripandwayPage tripandwayPages=new tripandwayPage();
+        TripandwayPage tripandwayPages=new TripandwayPage();
 
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView();", tripandwayPages.recentPostsElementi);
@@ -44,7 +44,7 @@ public class US06_TC01_Derya {
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
 
         //Sayfanin footer bolumune inilir
-        tripandwayPage tripandwayPages=new tripandwayPage();
+        TripandwayPage tripandwayPages=new TripandwayPage();
 
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView();", tripandwayPages.recentPostsElementi);
@@ -69,7 +69,7 @@ public class US06_TC01_Derya {
         //Sayfaya gidilir...
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         //Sayfanin footer bolumune inilir
-        tripandwayPage tripandwayPages = new tripandwayPage();
+        TripandwayPage tripandwayPages = new TripandwayPage();
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView();", tripandwayPages.recentPostsElementi);
         Thread.sleep(3000);
@@ -86,7 +86,7 @@ public class US06_TC01_Derya {
         //Sayfaya gidilir
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         //Sayfanin footer bolumune inilir
-        tripandwayPage tripandwayPages=new tripandwayPage();
+        TripandwayPage tripandwayPages=new TripandwayPage();
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView();", tripandwayPages.recentPostsElementi);
         Thread.sleep(3000);
@@ -103,7 +103,7 @@ public class US06_TC01_Derya {
         //Sayfaya gidilir
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         //Sayfanin footer bolumune inilir
-        tripandwayPage tripandwayPages=new tripandwayPage();
+        TripandwayPage tripandwayPages=new TripandwayPage();
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView();", tripandwayPages.recentPostsElementi);
         Thread.sleep(3000);
@@ -120,7 +120,7 @@ public class US06_TC01_Derya {
         //Sayfaya gidilir
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         //Sayfanin footer bolumune inilir
-        tripandwayPage tripandwayPage=new tripandwayPage();
+        TripandwayPage tripandwayPage=new TripandwayPage();
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView();", tripandwayPage.recentPostsElementi);
         Thread.sleep(3000);
@@ -137,7 +137,7 @@ public class US06_TC01_Derya {
         //Sayfaya gidilir
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         //Sayfanin footer bolumune inilir
-        tripandwayPage tripandwayPages=new tripandwayPage();
+        TripandwayPage tripandwayPages=new TripandwayPage();
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView();", tripandwayPages.recentPostsElementi);
         Thread.sleep(3000);
