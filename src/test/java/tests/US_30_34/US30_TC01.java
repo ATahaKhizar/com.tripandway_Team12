@@ -95,7 +95,8 @@ public class US30_TC01 extends TestBaseRapor {
         extentTest.pass("Admin confirmed that Destination is updated successfully!");
 
         // 14.Close browser
-        //  Driver.closeDriver();
+
+        // Driver.closeDriver();
     }
 
 }
