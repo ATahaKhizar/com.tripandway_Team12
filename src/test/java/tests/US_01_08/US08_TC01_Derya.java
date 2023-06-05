@@ -8,36 +8,33 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US08_TC01_Derya {
-        @Test
-        public void Test01() throws InterruptedException {
+    @Test
+    public void Test01() throws InterruptedException {
 
-            //ADRES BİLGİLERİNİN GÖRUNURLUGU DOGRULANIR
+        //Sayfaya gidilir
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
 
-            //Sayfaya gidilir.
-            Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
+        //Sayfanın Footer bölümüne inilir
+        tripandwayPage tripandwayPage = new tripandwayPage();
 
-            //Sayfanın Footer bölümüne inilir
-            tripandwayPage tripandwayPages = new tripandwayPage();
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        jse.executeScript("arguments[0].scrollIntoView();", tripandwayPage.addressElementi);
+        Thread.sleep(3000);
 
-            JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
-            jse.executeScript("arguments[0].scrollIntoView();", tripandwayPages.addressElementi);
-            Thread.sleep(3000);
+        //Adres bilgisinin görünür oldugu dogrulanır
+        SoftAssert softAssert=new SoftAssert();
+        softAssert.assertTrue(tripandwayPage.adressBilgisi.isDisplayed());
+        System.out.println(tripandwayPage.adressBilgisi.getText());
+        Thread.sleep(3000);
 
-            //Adres bilgisinin görünür oldugu dogrulanır
-            SoftAssert softAssert = new SoftAssert();
-            softAssert.assertTrue(tripandwayPages.adressBilgisi.isDisplayed());
-            System.out.println(tripandwayPages.adressBilgisi.getText());
-            Thread.sleep(3000);
+        //Telefon bilgisinin görünür oldugu dogrulanır
+        softAssert.assertTrue(tripandwayPage.telefonBilgisi.isDisplayed());
+        System.out.println(tripandwayPage.telefonBilgisi.getText());
+        Thread.sleep(2000);
 
-            //Telefon bilgisinin görünür oldugu dogrulanır..
-            softAssert.assertTrue(tripandwayPages.telefonBilgisi.isDisplayed());
-            System.out.println(tripandwayPages.telefonBilgisi.getText());
-            Thread.sleep(2000);
-
-            //e-mail bilgisinin görünür oldugu dogrulanır...
-            softAssert.assertTrue(tripandwayPages.emailBilgisi.isDisplayed());
-            System.out.println(tripandwayPages.emailBilgisi.getText());
-            softAssert.assertAll();
-
-        }
+        //e-mail bilgisinin görünür oldugu dogrulanır
+        softAssert.assertTrue(tripandwayPage.emailBilgisi.isDisplayed());
+        System.out.println(tripandwayPage.emailBilgisi.getText());
+        softAssert.assertAll();
     }
+}
