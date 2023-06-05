@@ -11,7 +11,7 @@ public class US08_TC01_Derya {
         @Test
         public void Test01() throws InterruptedException {
 
-            //Sayfaya gidilir
+            //Sayfaya gidilir...
             Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
 
             //Sayfanın Footer bölümüne inilir
