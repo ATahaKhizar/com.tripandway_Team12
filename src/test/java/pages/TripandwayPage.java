@@ -39,6 +39,39 @@ public class TripandwayPage {
     public WebElement allSubscribersLinki;
 
 
+    @FindBy(xpath = "//a[text()='Send Email to Subscribers']")
+    // Send Email to Subscribers (Tüm Haber Listesi) Linki
+    public WebElement sendEmailSubscribersLinki;
+
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
+    // All Subscribers Butonu (Mavi-Mail Gönderme Sayfası)
+    public WebElement allSubscribersButonu;
+
+    @FindBy(xpath = "//input[@name='subject']")
+    //  Send Mail Sayfasi Subject Text Kutusu
+    public WebElement subjectTextKutusu;
+
+    @FindBy(xpath = "//div[@role='textbox']")
+    //  Send Mail Sayfasi Message Text Kutusu
+    public WebElement messageTextKutusu;
+
+    @FindBy(xpath = "//button[text()='Send Email']")
+    //  Send Mail Sayfasi Send Email Butonu
+    public WebElement sendEmailButonu;
+
+    @FindBy(xpath = "//div[text()='Email is sent successfully to all subscribers!']")
+    // Tüm Üyelere Mail başarılı gönderildi yazı elementi (Email is sent successfully to all subscribers!)
+    public WebElement emailBasariliGonderildiYaziElementi;
+
+
+
+
+
+
+
+
+
+
 
 
 }
