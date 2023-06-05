@@ -13,6 +13,9 @@ public class tripandwayPage {
     @FindBy(xpath = "//*[@alt='Logo']")
     public WebElement tripandwayLogo;
 
+    @FindBy(xpath = "//h3[text()='Recent Posts']")
+    public WebElement recentPostsElementi;
+
 
 
 
