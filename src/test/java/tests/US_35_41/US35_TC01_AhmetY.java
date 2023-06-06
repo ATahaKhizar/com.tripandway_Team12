@@ -6,13 +6,13 @@ import pages.TripandwayPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US01_TC01_AhmetY {
+public class US35_TC01_AhmetY {
 
     TripandwayPage tripandwayPage;
     SoftAssert softAssert;
 
     @Test
-    public void test01() {
+    public void allSubscriberGorunurlukTesti() {
         // 1-> Admin login sayfasina gidilir.Admin Login Url = https://qa.tripandway.com/admin/login
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayAdminURL"));
 
@@ -36,6 +36,8 @@ public class US01_TC01_AhmetY {
                 ,"All Subscribers Linki görülemedi");
 
         softAssert.assertAll();
+
+        // 5-> Browser Kapatilir.
         Driver.closeDriver();
     }
 }
