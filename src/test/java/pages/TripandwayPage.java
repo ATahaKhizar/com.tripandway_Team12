@@ -63,6 +63,118 @@ public class TripandwayPage {
     // Tüm Üyelere Mail başarılı gönderildi yazı elementi (Email is sent successfully to all subscribers!)
     public WebElement emailBasariliGonderildiYaziElementi;
 
+    // US_30
+
+    // Admin ana sayfasındaki dashboard yazisi
+    @FindBy (xpath = "//h1[text()='Dashboard']")
+    public WebElement adminSayfasiDasboardPage;
+
+    // Admin ana sayfasındaki yandaki tiklanabilir sekmelerden destinations sekmesi
+    @FindBy (xpath = "//span[text()='Destinations']")
+    public WebElement adminSayfasiDestinationsTab;
+
+    // Admin Destinations sayfasindaki üstteki View Destinations yazisi
+    @FindBy (xpath = "//h6[text()='View Destinations']")
+    public WebElement adminSayfasiDestinationPage;
+
+    // Admin Destinations sayfasindaki sağ üstteki +Add New Butonu
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/admin/destination/create']")
+    public WebElement adminSayfasiDestinationsAddNewButton;
+
+    // Admin Add Destination sayfasindaki Üstteki add destinations yazisi
+    @FindBy (xpath = "//h6[text()='Add Destination']")
+    public WebElement adminSayfasiAddDestinationsPage;
+
+    // Admin Add Destination sayfasindaki Name Kutusu
+    @FindBy (xpath = "//input[@name='d_name']")
+    public WebElement adminSayfasiDestinationName;
+
+    // Admin Add Destination sayfasindaki Slug Kutusu
+    @FindBy (xpath = "//input[@name='d_slug']")
+    public WebElement adminSayfasiDestinationSlug;
+
+    // Admin Add Destination sayfasindaki Heading Kutusu
+    @FindBy (xpath = "//input[@name='d_heading']")
+    public WebElement adminSayfasiDestinationHeading;
+
+    // Admin Add Destination sayfasindaki Short Description Kutusu
+    @FindBy (xpath = "//textarea[@name='d_short_description']")
+    public WebElement adminSayfasiDestinationShotrtDescription;
+
+    // Admin Add Destination sayfasindaki Package Heading Kutusu
+    @FindBy (xpath = "//input[@name='d_package_heading']")
+    public WebElement adminSayfasiDestinationPackageHeading;
+
+    // Admin Add Destination sayfasindaki Package Subheading Kutusu
+    @FindBy (xpath = "//input[@name='d_package_subheading']")
+    public WebElement adminSayfasiDestinationDetailHeading;
+
+    // Admin Add Destination sayfasindaki Detail Heading Kutusu
+    @FindBy (xpath = "//input[@name='d_detail_subheading']")
+    public WebElement adminSayfasiDestinationDetailSubheading;
+
+    // Admin Add Destination sayfasindaki Photo Dosya Sec Butonu
+    @FindBy (xpath = "//input[@name='d_photo']")
+    public WebElement adminSayfasiDestinationPhoto;
+
+    // Admin Add Destination sayfasindaki Introduction Kutusu
+    @FindBy (xpath = "(//div[@contenteditable='true'])[1]")
+    public WebElement adminSayfasiDestinationIntroduction;
+
+    // Admin Add Destination sayfasindaki Experience Kutusu
+    @FindBy (xpath = "(//div[@contenteditable='true'])[2]")
+    public WebElement adminSayfasiDetinnationExperience;
+
+    // Admin Add Destination sayfasindaki Weather Kutusu
+    @FindBy (xpath = "(//div[@contenteditable='true'])[3]")
+    public WebElement adminSayfasiDestinationWeather;
+
+    // Admin Add Destination sayfasindaki Hotel Kutusu
+    @FindBy (xpath = "(//div[@contenteditable='true'])[4]")
+    public WebElement adminSayfasiDestinationHotel;
+
+    // Admin Add Destination sayfasindaki Transportation Kutusu
+    @FindBy (xpath = "(//div[@contenteditable='true'])[5]")
+    public WebElement adminSayfasiDestinationTransportation;
+
+    // Admin Add Destination sayfasindaki Culture Kutusu
+    @FindBy (xpath = "(//div[@contenteditable='true'])[6]")
+    public WebElement adminSayfasiDestinationCulture;
+
+    // Admin Add Destination sayfasindaki Title Kutusu
+    @FindBy (xpath = "//input[@name='seo_title']")
+    public WebElement adminSayfasiDestinationTitle;
+
+    // Admin Add Destination sayfasindaki Meta Description Kutusu
+    @FindBy (xpath = "//textarea[@name='seo_meta_description']")
+    public WebElement adminSayfasiDestinationMetaDescription;
+
+    // Admin Add Destination sayfasindaki alttaki Submit Butonu
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement adminSayfasiDestinationSubmitButton;
+
+    // Admin Destination sayfasindaki added successfully yazisi
+    @FindBy (xpath = "//div[text()='Destination is added successfully!']")
+    public WebElement adminSayfasiDetinationAddedSuccesfully;
+
+    // Admin Destination sayfasindaki olusturulan destination edit butonu
+    @FindBy (xpath = "//i[@class='fas fa-edit']")
+    public WebElement adminSayfasiDestinationEditButton;
+
+    // Admin  Destination sayfasindaki Update Kutusu
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement adminSayfasiDestinationUpdateButton;
+
+    // Admin Destination sayfasindaki update successfully yazisi
+    @FindBy (xpath = "//div[text()='Destination is updated successfully!']")
+    public WebElement adminSayfasiDetinationUpdatedSuccesfully;
+
+    // Admin Destination sayfasindaki sıralama sekmesi
+    @FindBy (xpath = "//th[@class='sorting_asc']")
+    public WebElement adminSayfasiSlButton;
+
+    // US_30 Sonu
+
 
 
 
