@@ -9,5 +9,8 @@
         <module name="com.tripandway_Team12" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.tripandway_Team12" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>
