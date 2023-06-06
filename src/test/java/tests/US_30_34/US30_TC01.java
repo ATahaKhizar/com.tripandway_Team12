@@ -23,8 +23,8 @@ public class US30_TC01 extends TestBaseRapor {
         extentTest.info("Admin navigate to admin log in page");
 
         // 3.Log in with correct email and password and click login button
-        tripandwayPage.adminLoginSayfasiEmailKutusu.sendKeys(ConfigReader.getProperty("adminEmail"));
-        tripandwayPage.adminLoginSayfasiPasswordKutusu.sendKeys(ConfigReader.getProperty("adminPassword"));
+        tripandwayPage.adminLoginSayfasiEmailKutusu.sendKeys(ConfigReader.getProperty("tripandwayAdminEmail"));
+        tripandwayPage.adminLoginSayfasiPasswordKutusu.sendKeys(ConfigReader.getProperty("tripandwayAdminPassword"));
         tripandwayPage.adminLoginSayfasiLoginButonu.click();
         extentTest.info("Admin sing up email and password and click log in button");
 
