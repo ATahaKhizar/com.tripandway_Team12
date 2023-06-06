@@ -200,18 +200,24 @@ public class TripandwayPage {
     public WebElement instagramElementi;
 
 
+    @FindBy(xpath = "//img[@class='img-profile rounded-circle']")
+    //Admin panel sayfasi admin isim ve profil resmi linki
+    public WebElement adminProfilResmiLinki;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
+    // Admin paneli Change Password linki
+    public WebElement adminChangePasswordLinki;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+    // Admin paneli Change Password linki
+    public WebElement adminChangePhotoLinki;
+
+    @FindBy(xpath = "//h1[text()='Edit Photo']")
+    // Admin Edit Photo Yazısı elmenti
+    public WebElement adminEditPhotoText;
+
 
     // US_30 Sonu
-
-
-
-
-
-
-
-
-
-
 
 
 }
