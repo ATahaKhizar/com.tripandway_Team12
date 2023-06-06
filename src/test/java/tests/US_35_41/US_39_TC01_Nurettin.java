@@ -35,13 +35,7 @@ public class US_39_TC01_Nurettin {
 
         // Fotoğraf değiştirme ekranın görüntüelendiğinin doğrulanması
         Assert.assertTrue(tripandwayPage.adminEditPhotoText.isDisplayed());
-
-
-
-
-
-
-
+        // ...
 
         Driver.closeDriver();
 
