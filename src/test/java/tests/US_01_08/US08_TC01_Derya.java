@@ -3,7 +3,8 @@ package tests.US_01_08;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.tripandwayPage;
+import pages.TripandwayPage;
+
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -17,13 +18,13 @@ public class US08_TC01_Derya {
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
 
         //Sayfanın Footer bölümüne inilir..
-        tripandwayPage tripandwayPage = new tripandwayPage();
+        TripandwayPage tripandwayPage = new TripandwayPage();
 
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView();", tripandwayPage.addressElementi);
         Thread.sleep(3000);
 
-        //Adres bilgisinin görünür oldugu dogrulanır....g
+        //Adres bilgisinin görünür oldugu dogrulanır......g
         SoftAssert softAssert=new SoftAssert();
         softAssert.assertTrue(tripandwayPage.adressBilgisi.isDisplayed());
         System.out.println(tripandwayPage.adressBilgisi.getText());

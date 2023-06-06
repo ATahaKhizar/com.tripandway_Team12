@@ -173,17 +173,6 @@ public class TripandwayPage {
     @FindBy (xpath = "//th[@class='sorting_asc']")
     public WebElement adminSayfasiSlButton;
 
-    @FindBy(xpath = "//*[text()='34, Edd Lane, NYC, 22335']")
-    public WebElement adressBilgisi;
-
-    @FindBy(xpath = "(//p[text()='202-456-3789'])[2]")
-    public WebElement telefonBilgisi;
-
-    @FindBy(xpath = "(//p[text()='info@tripandway.com'])[2]")
-    public WebElement emailBilgisi;
-    @FindBy(xpath = "//*[text()='Address']")
-    public WebElement addressElementi;
-
     // US_30 Sonu
 
 
