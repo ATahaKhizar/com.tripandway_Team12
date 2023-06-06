@@ -11,6 +11,8 @@ public class US08_TC01_Derya {
     @Test
     public void Test01() throws InterruptedException {
 
+        //ADRES BİLGİLERİNİN GÖRÜNÜRLÜĞÜNÜ DOGRULAMA
+
         //Sayfaya gidilir
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
 
