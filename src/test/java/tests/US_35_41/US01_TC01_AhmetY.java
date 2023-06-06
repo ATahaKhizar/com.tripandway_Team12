@@ -35,6 +35,7 @@ public class US01_TC01_AhmetY {
         softAssert.assertTrue(tripandwayPage.allSubscribersLinki.isDisplayed()
                 ,"All Subscribers Linki görülemedi");
 
+
         softAssert.assertAll();
         Driver.closeDriver();
     }
