@@ -7,7 +7,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US_39_TC01_Nurettin {
+public class US39_TC01_Nurettin {
 
 
     @Test
