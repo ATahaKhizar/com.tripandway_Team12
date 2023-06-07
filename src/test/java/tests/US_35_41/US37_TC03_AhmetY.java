@@ -26,7 +26,7 @@ public class US37_TC03_AhmetY extends TestBaseRapor {
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayAdminURL"));
         extentTest.info("Kullanici Admin Panel sayfasina gider.");
 
-        // 2-> Doğru e-posta ve şifre ile giriş yapılır. email="admin34@tripandway.com" password="123123123"
+        //  2-> Doğru e-posta ve şifre ile giriş yapılır. email="admin34@tripandway.com" password="123123123"
 
         tripandwayPage = new TripandwayPage();
         tripandwayPage.adminLoginSayfasiEmailKutusu.sendKeys(ConfigReader.getProperty("tripandwayAdminEmail"));
