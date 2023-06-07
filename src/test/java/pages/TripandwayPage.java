@@ -209,12 +209,16 @@ public class TripandwayPage {
     public WebElement adminChangePasswordLinki;
 
     @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
-    // Admin paneli Change Password linki
+    // Admin paneli Change Photo linki
     public WebElement adminChangePhotoLinki;
 
     @FindBy(xpath = "//h1[text()='Edit Photo']")
     // Admin Edit Photo Yazısı elmenti
     public WebElement adminEditPhotoText;
+
+    @FindBy (xpath = "//h1[text()='Edit Profile']")
+    //Admin Edit Profil Yazısı elementi
+    public WebElement adminEditProfilText;
 
 
     // US_30 Sonu

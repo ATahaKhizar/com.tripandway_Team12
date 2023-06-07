@@ -2,6 +2,7 @@ package tests.US_35_41;
 
 
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.TripandwayPage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -30,6 +31,11 @@ TripandwayPage tripandwayPage= new TripandwayPage();
         tripandwayPage.adminChangePasswordLinki.click();
         ReusableMethods.waitFor(3);
 
+        //Change password ekranında olduğu doğrualanır
+    SoftAssert softAssert = new SoftAssert();
+    softAssert.assertTrue(!tripandwayPage.adminEditProfilText.isDisplayed(), "Change Password görüntülenmedi, Edit Profil görüntülendi");
+
+    softAssert.assertAll();
         Driver.closeDriver();
 
     }
