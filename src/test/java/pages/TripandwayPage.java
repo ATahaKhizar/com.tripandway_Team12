@@ -217,7 +217,48 @@ public class TripandwayPage {
     public WebElement adminEditPhotoText;
 
 
-    // US_30 Sonu
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/destination'])[2]")
+    // Kullanici Anasayfasindaki destinations elementi
+    public WebElement destinationsElementi;
+
+     @FindBy(xpath = "//h1[text()='Destinations']")
+    // Destinations sayfasindaki 'Destinations' yazisi elementi
+    public WebElement destinationsYazisiElm;
+
+     @FindBy(xpath = "//a[text()='Bangkok, Thailand']")
+    // Destinations sayfasindaki, 'Bangkok,Thailand' paketi elementi
+    public WebElement bangkokThailandPakElm;
+
+     @FindBy(xpath = "//a[text()='Greenville, South Carolina']")
+    // Destinations sayfasindaki, 'Greenville,South Carolina' paketi elementi
+    public WebElement greenvilleSCPakElm;
+
+     @FindBy(xpath = "//a[text()='Buenos Aires, Argentina']")
+    // Destinations sayfasindaki, 'Buenos Aires, Argentina' paketi elementi
+    public WebElement buenosAiresArgentinaPakElm;
+
+     @FindBy(xpath = "//a[text()='Marrakesh, Morocco']")
+    // Destinations sayfasindaki, 'Buenos Aires, Argentina' paketi elementi
+     public WebElement marrakeshMoraccoElm;
+
+     @FindBy(xpath = "//a[text()='Salina Island, Italy']")
+     // Destinations sayfasindaki, 'Salina Island, Italy' paketi elementi
+    public WebElement salinaIslandItalyElm;
+
+    @FindBy(xpath = "//a[text()='Istanbul, Turkey']")
+    // Destinations sayfasindaki, 'Istanbul,Turkey' paketi elementi
+    public WebElement istanbulTurkeyElm;
+
+    @FindBy(xpath = "//a[text()='California, USA']")
+    // Destinations sayfasindaki, 'California, USA' paketi elementi
+    public WebElement californiaUSAElm;
+
+    @FindBy(xpath = "//a[text()='asfas']")
+    // Destinations sayfasindaki, 'asfas' paketi elementi
+    public WebElement asfasElementi;
+
+    @FindBy(xpath = "//button[@class='wpcc-btn']")
+    public WebElement anasayfaCookiesElm;
 
 
 }
