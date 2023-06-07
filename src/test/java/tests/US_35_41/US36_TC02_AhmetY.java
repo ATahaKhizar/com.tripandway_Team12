@@ -64,7 +64,7 @@ public class US36_TC02_AhmetY extends TestBaseRapor {
         ReusableMethods.waitFor(2);
         extentTest.info("Subject ve Message kutularina text gönderip Send Mail butonuna basar.");
 
-        //7-> Tüm Üyelere Mail başarılı gönderildi yazı elementi (Email is sent successfully to all subscribers!)
+        //7->  Tüm Üyelere Mail başarılı gönderildi yazı elementi (Email is sent successfully to all subscribers!)
         softAssert.assertTrue(tripandwayPage.emailBasariliGonderildiYaziElementi.isDisplayed()
                 , "Email is sent successfully to all subscribers! elementi goruntulenemedi");
 
