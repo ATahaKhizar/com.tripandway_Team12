@@ -1,15 +1,14 @@
 package tests.US_01_08;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.ConfigReader;
+
 import utilities.Driver;
 
-import java.time.Duration;
 
-import static utilities.Driver.driver;
+
 
 public class US01_TC01_Zafer {
 
