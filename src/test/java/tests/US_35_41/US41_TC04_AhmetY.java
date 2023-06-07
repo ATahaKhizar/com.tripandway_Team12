@@ -36,7 +36,7 @@ public class US41_TC04_AhmetY extends TestBaseRapor {
         softAssert = new SoftAssert();
         softAssert.assertTrue(Driver.getDriver().getCurrentUrl().contains("dashboard"),
                 "Admin Panel sayfasinda degilsiniz");
-        extentTest.info("Admin Panel sayfasinda oldugunu dogrular.");
+        extentTest.pass("Admin Panel sayfasinda oldugunu dogrular.");
 
         //4-> admin34 (profil-foto) linkine tiklanir acilan alt sekmedeki Logout linkine tiklanir.
         tripandwayPage.adminProfilResmiLinki.click();
