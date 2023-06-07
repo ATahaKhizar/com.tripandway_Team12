@@ -219,5 +219,57 @@ public class TripandwayPage {
 
     // US_30 Sonu
 
+    // US01_TC01_Zafer - US02_TC01_Zafer
+    // Kullanıcı anasayfadaki sol üstte görünen iletişim bilgisi
+    @FindBy(xpath = "//*[@class='fas fa-phone']")
+    public WebElement kullaniciAnaSayfadakiNumara;
+
+    // Kullanıcı anasayfadaki sol üstte görünen email
+    @FindBy(xpath = "(//*[text()='info@tripandway.com'])[1]")
+    public WebElement kullaniciAnasayfadakiEmail;
+
+    // Kullanıcı anasayfadaki sağ üstteki Registration
+    @FindBy(xpath = "//*[@class='fas fa-user-plus']")
+    public WebElement kullaniciAnasayfadakiRegistration;
+
+    // Kullanıcı anasahyafaki sağ üstteki Login butonu
+    @FindBy(xpath = "//*[@class='fas fa-lock']")
+    public WebElement kullaniciAnasayfadakiLogin;
+
+    // Kullanıcı anasayfadaki Logo
+    @FindBy(xpath = "//*[@src='https://qa.tripandway.com/public/uploads/logo.png']")
+    public WebElement kullaniciAnasayfadakiLogo;
+
+    // Kullanıcı anasayfadaki Home bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com'])[3]")
+    public WebElement kullaniciAnasayfadakiHome;
+
+    // Kullanıcı anasayfadaki Services bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/services'])[2]")
+    public WebElement kullaniciAnasayfadakiServices;
+
+    // Kullanıcı anasayfadaki Destinations bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/destination'])[2]")
+    public WebElement kullaniciAnasayfadakiDestinations;
+
+    // Kullanıcı anasayfadaki Packages bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/package'])[2]")
+    public WebElement kullaniciAnasayfadakiPackages;
+
+    // Kullanıcı anasayfadaki About Us bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/about'])[2]")
+    public WebElement kullaniciAnasayfadakiAboutUs;
+
+    // Kullanıcı anasayfadaki FAQ bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/faq'])[2]")
+    public WebElement kullaniciAnasayfadakiFaq;
+
+    // Kullanıcı anasayfadaki Blog bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/blog'])[2]")
+    public WebElement kullaniciAnasayfadakiBlog;
+
+    // Kullanıcı anasayfadaki Contact bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/contact'])[2]")
+    public WebElement kullaniciAnasayfadakiContact;
 
 }
