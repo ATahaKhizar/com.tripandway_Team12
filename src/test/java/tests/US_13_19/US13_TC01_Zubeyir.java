@@ -13,6 +13,7 @@ public class US13_TC01_Zubeyir {
     @Test
     public void DestinationsSayfasiTesti(){
 
+        tripandwayPage = new TripandwayPage();
         // Bu test methodundaki destinations paketleri 8 adet olup sayisi az oldugu icin,
         // SoftAssert yerine Assert test kullanildi.
 
