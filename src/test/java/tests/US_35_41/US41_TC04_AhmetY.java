@@ -45,7 +45,7 @@ public class US41_TC04_AhmetY extends TestBaseRapor {
         extentTest.info("Kullanici Logout linkine tiklar.");
         ReusableMethods.waitFor(1);
 
-        //5-> Gidilen sayfanin site ekranı (Title'inin Tripandway) oldugu dogrulanir.
+        //5->  Gidilen sayfanin site ekranı (Title'inin Tripandway) oldugu dogrulanir.
         String expectedTitle = "Tripandway";
         //Gidilen sayfanin Title'i
         String actualTitle = Driver.getDriver().getTitle();
