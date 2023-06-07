@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class Driver {
+
     private static WebDriver driver;
     private Driver(){
         /*Singleton pattern kullanilarak
@@ -24,7 +25,10 @@ public class Driver {
 
     public static WebDriver getDriver() {
 
+    public static WebDriver driver;
+
         String istenenBrowser = ConfigReader.getProperty("browser");
+
 
 
         if (driver == null) {
@@ -35,6 +39,15 @@ public class Driver {
                     driver = new ChromeDriver();
             }
 
+
+        String istenenBrowser = ConfigReader.getProperty("browser");
+        // chrome, firefox, safari, edge
+
+
+        if(driver == null){
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+         }
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
@@ -46,6 +59,21 @@ public class Driver {
         if (driver != null) {
             driver.close();
             driver = null;
+
+
+    public static void closeDriver(){
+
+        if (driver != null){
+            driver.close();
+            driver=null;
+        }
+    }
+
+    public static void quitDriver(){
+
+        if (driver != null){
+            driver.quit();
+            driver=null;
 
         }
     }

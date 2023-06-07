@@ -16,7 +16,7 @@ public class TripandwayPage {
     @FindBy(xpath = "//h3[text()='Recent Posts']")
     public WebElement recentPostsElementi;
 
-
+ // US_35-36-37-41 Baslangici
     @FindBy(xpath = "//input[@id='email']")
     // Admin Login Sayfası Email Address Text Kutusu
     public WebElement adminLoginSayfasiEmailKutusu;
@@ -62,6 +62,13 @@ public class TripandwayPage {
     @FindBy(xpath = "//div[text()='Email is sent successfully to all subscribers!']")
     // Tüm Üyelere Mail başarılı gönderildi yazı elementi (Email is sent successfully to all subscribers!)
     public WebElement emailBasariliGonderildiYaziElementi;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
+    //  Admin Sayfasi admin34 Linki Altı Logout Linki
+    public WebElement logoutLinki;
+
+    // US_35-36-37-41 Bitisi
+
 
     // US_30
 
@@ -220,8 +227,211 @@ public class TripandwayPage {
     //Admin Edit Profil Yazısı elementi
     public WebElement adminEditProfilText;
 
+   // Admin ana sayfasındaki yandaki tiklanabilir sekmelerden packages sekmesi
+   @FindBy (xpath = "//span[text()='Packages']")
+   public WebElement adminSayfasiPackagesTab;
 
-    // US_30 Sonu
+   // Admin packages sayfasında sol üstteki View Packages yazisi
+   @FindBy (xpath = "//h6[text()='View Packages']")
+   public WebElement adminSayfasiPackagesPage;
 
+   // Admin packages sayfasında sağ üstteki +add new butonu
+   @FindBy (xpath = "//a[@href='https://qa.tripandway.com/admin/package/create']")
+   public WebElement adminSayfasiPackagesAddNewButton;
+
+   // Admin add packages sayfasında üstteki Add Pakage yazisi
+   @FindBy (xpath = "//h6[text()='Add Pakage']")
+   public WebElement adminSayfasiAddPackagePage;
+
+   // Admin add packages sayfasında name kutusu
+   @FindBy (xpath = "//input[@name='p_name']")
+   public WebElement adminSayfasiPackageName;
+
+   // Admin add packages sayfasında slug kutusu
+   @FindBy (xpath = "//input[@name='p_slug']")
+   public WebElement adminSayfasiPackageSlug;
+
+   // Admin add packages sayfasında photo dosya seç butonu
+   @FindBy (xpath = "//input[@name='p_photo']")
+   public WebElement adminSayfasiPackagePhoto;
+
+   // Admin add packages sayfasında desciription kutusu
+   @FindBy (xpath = "(//div[@contenteditable='true'])[1]")
+   public WebElement adminSayfasiPackageDescription;
+
+   // Admin add packages sayfasında Short Description kutusu
+   @FindBy (xpath = "//textarea[@name='p_description_short']")
+   public WebElement adminSayfasiPackageShortDescription;
+
+   // Admin add packages sayfasında location kutusu
+   @FindBy (xpath = "//textarea[@name='p_location']")
+   public WebElement adminSayfasiPackageLocation;
+
+   // Admin add packages sayfasında start date kutusu
+   @FindBy (xpath = "//input[@name='p_start_date']")
+   public WebElement adminSayfasiPackageStartDate;
+
+   // Admin add packages sayfasında End date kutusu
+   @FindBy (xpath = "//input[@name='p_end_date']")
+   public WebElement adminSayfasiPackageEndDate;
+
+   // Admin add packages sayfasında last booking date kutusu
+   @FindBy (xpath = "//input[@name='p_last_booking_date']")
+   public WebElement adminSayfasiPackageLastBookingDate;
+
+   // Admin add packages sayfasında map kutusu
+   @FindBy (xpath = "//textarea[@name='p_map']")
+   public WebElement adminSayfasiPackageMap;
+
+   // Admin add packages sayfasında Itinerary kutusu
+   @FindBy (xpath = "(//div[@contenteditable='true'])[2]")
+   public WebElement adminSayfasiPackageItinerary;
+
+   // Admin add packages sayfasında price kutusu
+   @FindBy (xpath = "//input[@name='p_price']")
+   public WebElement adminSayfasiPackagePrice;
+
+   // Admin add packages sayfasında policy kutusu
+   @FindBy (xpath = "(//div[@contenteditable='true'])[3]")
+   public WebElement adminSayfasiPackagePolicy;
+
+   // Admin add packages sayfasında terms kutusu
+   @FindBy (xpath = "(//div[@contenteditable='true'])[4]")
+   public WebElement adminSayfasiPackageTerms;
+
+   // Admin add packages sayfasında is featured kutusu
+   @FindBy (xpath = "//select[@name='p_is_featured']")
+   public WebElement adminSayfasiPackageIsFeatured;
+
+   // Admin add packages sayfasında destination kutusu
+   @FindBy (xpath = "//span[@class='select2-selection__rendered']")
+   public WebElement adminSayfasiPackageDestination;
+
+   // Admin add packages sayfasında description box kutusu
+   @FindBy (xpath = "//input[@class='select2-search__field']")
+   public WebElement adminSayfasiPackageDescriptionBox;
+
+   // Admin add packages sayfasında title kutusu
+   @FindBy (xpath = "//input[@name='seo_title']")
+   public WebElement adminSayfasiPackageTitle;
+
+   // Admin add packages sayfasında meta description kutusu
+   @FindBy (xpath = "//textarea[@name='seo_meta_description']")
+   public WebElement adminSayfasiPackageMetaDescription;
+
+   // Admin add packages sayfasında alttaki submit butonu
+   @FindBy (xpath = "//button[@type='submit']")
+   public WebElement adminSayfasiPackageSubmitButton;
+
+   // Admin packages sayfasında add successfully yazisi
+   @FindBy (xpath = "//div[text()='Package is added successfully!']")
+   public WebElement adminSayfasiPackageAddSuccessfully;
+
+   // Admin add packages sayfasında sıralama sekmesi
+   @FindBy (xpath = "//th[@class='sorting_asc']")
+   public WebElement adminSayfasiPackageSlButton;
+
+   // Admin packages sayfasında olusturulan packages'in edit butonu
+   @FindBy (xpath = "//i[@class='fas fa-edit']")
+   public WebElement adminSayfasiPackageEditButton;
+
+   // Admin packages sayfasında alttaki update butonu
+   @FindBy (xpath = "//button[@type='submit']")
+   public WebElement adminSayfasiPackageUpdateButton;
+
+   // Admin packages sayfasında update successfully yazisi
+   @FindBy (xpath = "//div[text()='Package is updated successfully!']")
+   public WebElement adminSayfasiPackageUpdatedSuccessfully;
+
+   // Admin packages sayfasında olusturulan packages'in delete butonu
+   @FindBy (xpath = "//i[@class='fas fa-trash-alt']")
+   public WebElement adminSayfasiPackageDeleteButton;
+
+   // Admin packages sayfasında delete successfully yazisi
+   @FindBy (xpath = "//div[text()='Package is deleted successfully!']")
+   public WebElement adminSayfasiPackageDeleteSuccessfully;
+
+   // US_32
+
+   // Admin ana sayfasındaki yandaki tiklanabilir sekmelerden order sekmesi
+   @FindBy (xpath = "//span[text()='Order']")
+   public WebElement adminSayfasiOrderPageTab;
+
+   // Admin order sayfasında üstteki view orders yazisi
+   @FindBy(xpath = "//h6[text()='View Orders']")
+   public WebElement adminSayfasiOrdersDisplayed;
+
+   // US_33
+
+   // Admin order sayfasında olusturulan order'in üstteki order information yazisi
+   @FindBy (xpath = "//h6[text()='Order Information']")
+   public WebElement adminSayfasiOrderDetailDisplayed;
+
+   // Admin order sayfasında order'in detail butonu
+   @FindBy (xpath = "//a[@href='https://qa.tripandway.com/admin/order/detail/8']")
+   public WebElement adminSayfasiOrdersDetail;
+
+   // US_34
+
+   // Admin order sayfasında order'in invoice butonu
+   @FindBy (xpath = "//a[@href='https://qa.tripandway.com/admin/order/invoice/8']")
+   public WebElement adminSayfasiOrderInvoice;
+
+   // Admin order sayfasında olusturulan order'in üstteki order invoice yazisi
+   @FindBy (xpath = "//h6[text()='Order Invoice']")
+   public WebElement adminSayfasiOrdersInvoiceDisplayed;
+
+    // US01_TC01_Zafer - US02_TC01_Zafer
+    // Kullanıcı anasayfadaki sol üstte görünen iletişim bilgisi
+    @FindBy(xpath = "//*[@class='fas fa-phone']")
+    public WebElement kullaniciAnaSayfadakiNumara;
+
+    // Kullanıcı anasayfadaki sol üstte görünen email
+    @FindBy(xpath = "(//*[text()='info@tripandway.com'])[1]")
+    public WebElement kullaniciAnasayfadakiEmail;
+
+    // Kullanıcı anasayfadaki sağ üstteki Registration
+    @FindBy(xpath = "//*[@class='fas fa-user-plus']")
+    public WebElement kullaniciAnasayfadakiRegistration;
+
+    // Kullanıcı anasahyafaki sağ üstteki Login butonu
+    @FindBy(xpath = "//*[@class='fas fa-lock']")
+    public WebElement kullaniciAnasayfadakiLogin;
+
+    // Kullanıcı anasayfadaki Logo
+    @FindBy(xpath = "//*[@src='https://qa.tripandway.com/public/uploads/logo.png']")
+    public WebElement kullaniciAnasayfadakiLogo;
+
+    // Kullanıcı anasayfadaki Home bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com'])[3]")
+    public WebElement kullaniciAnasayfadakiHome;
+
+    // Kullanıcı anasayfadaki Services bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/services'])[2]")
+    public WebElement kullaniciAnasayfadakiServices;
+
+    // Kullanıcı anasayfadaki Destinations bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/destination'])[2]")
+    public WebElement kullaniciAnasayfadakiDestinations;
+
+    // Kullanıcı anasayfadaki Packages bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/package'])[2]")
+    public WebElement kullaniciAnasayfadakiPackages;
+
+    // Kullanıcı anasayfadaki About Us bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/about'])[2]")
+    public WebElement kullaniciAnasayfadakiAboutUs;
+
+    // Kullanıcı anasayfadaki FAQ bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/faq'])[2]")
+    public WebElement kullaniciAnasayfadakiFaq;
+
+    // Kullanıcı anasayfadaki Blog bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/blog'])[2]")
+    public WebElement kullaniciAnasayfadakiBlog;
+
+    // Kullanıcı anasayfadaki Contact bölümü
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/contact'])[2]")
+    public WebElement kullaniciAnasayfadakiContact;
 
 }
