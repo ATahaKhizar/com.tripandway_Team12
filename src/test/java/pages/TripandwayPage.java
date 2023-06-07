@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class tripandwayPage {
-    public tripandwayPage(){
+public class TripandwayPage {
+    public TripandwayPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
     //Home Page kısmında sol üstte bulunan Logo locaterı
