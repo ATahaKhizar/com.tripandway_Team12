@@ -17,7 +17,7 @@ public class US35_TC01_AhmetY extends TestBaseRapor {
         extentTest = extentReports.createTest("All Subscribers Testi",
                 "Kullanici admin panel sayfasinda tum haber listesi uyelerini goruntuleyebilmeli");
 
-        // 1-> Admin login sayfasina gidilir.Admin Login Url = https://qa.tripandway.com/admin/login
+        //  1-> Admin login sayfasina gidilir.Admin Login Url = https://qa.tripandway.com/admin/login
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayAdminURL"));
         extentTest.info("Kullanici Admin Panel sayfasina gider.");
 
