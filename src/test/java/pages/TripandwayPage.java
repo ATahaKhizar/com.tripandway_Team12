@@ -16,7 +16,7 @@ public class TripandwayPage {
     @FindBy(xpath = "//h3[text()='Recent Posts']")
     public WebElement recentPostsElementi;
 
-
+ // US_35-36-37-41 Baslangici
     @FindBy(xpath = "//input[@id='email']")
     // Admin Login Sayfası Email Address Text Kutusu
     public WebElement adminLoginSayfasiEmailKutusu;
@@ -62,6 +62,13 @@ public class TripandwayPage {
     @FindBy(xpath = "//div[text()='Email is sent successfully to all subscribers!']")
     // Tüm Üyelere Mail başarılı gönderildi yazı elementi (Email is sent successfully to all subscribers!)
     public WebElement emailBasariliGonderildiYaziElementi;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
+    //  Admin Sayfasi admin34 Linki Altı Logout Linki
+    public WebElement logoutLinki;
+
+    // US_35-36-37-41 Bitisi
+
 
     // US_30
 
