@@ -141,7 +141,44 @@ public class TripandwayPage {
     // Dashboard sayfasında üstte bulunan "PACKAGES" butonu
     @FindBy(xpath = "(//*[text()='Packages'])[2]")
     public WebElement packagesButton;
-=======
+
+    //Package sayfasında 5 Day California butonu
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/package/california']")
+    public WebElement californiaButonu;
+
+    // California Package'ında "Book Your Seat" butonu
+    @FindBy(xpath = "//button[text()='Book Your Seat']")
+    public WebElement bookYourSeatButton;
+
+    // Ödeme sayfasında kartla ödeme butonu
+    @FindBy(xpath = "//span[text()='Pay with Card']")
+    public WebElement payWithCardButton;
+
+    // Ödeme sayfasındaki Card Number Textbox'ı
+    @FindBy(xpath = "//input[@id='card_number']")
+    public WebElement cardNumberTextbox;
+
+    // Ödeme sayfasındaki MM/YY textbox'ı
+    @FindBy(xpath = "//input[@id='cc-exp']")
+    public WebElement sKTButton;
+
+    // Ödeme sayfasındaki CVC textbox'ı
+    @FindBy(xpath = "//input[@id='cc-csc']")
+    public WebElement cvcTextbox;
+
+    // Ödeme sayfasındaki Pay Butonu
+    @FindBy (xpath = "//span[@class='iconTick']")
+    public WebElement payButton;
+
+    //Ödeme yapıldıktan sonra ödemenin başarılı bir şekilde yapıldığını gösteren yazı
+    @FindBy(xpath = "//*[text()='Profile is updated successfully']")
+    public WebElement basariliOdemeYapildiYazisi;
+
+    //Login sayfasındaki cookies
+    @FindBy(xpath = "//button[text()='ACCEPT']")
+    public WebElement cookieButton;
+
+
     @FindBy(xpath = "//h3[text()='Recent Posts']")
     public WebElement recentPostsElementi;
 

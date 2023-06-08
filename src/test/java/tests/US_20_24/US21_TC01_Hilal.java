@@ -6,34 +6,32 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.tripandwayPage;
+import pages.TripandwayPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class US21_TC01_Hilal {
     @Test
     public void testCase01(){
 
-        //Ödeme geçmişini görüntüleyebildiğimi doğrulayabilmeliyim
+        //Ödeme geçmişini görüntüleyebildiğimi doğrulayabilmeliyim...
 
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
-        tripandwayPage tripandwaypage = new tripandwayPage();
-        tripandwaypage.loginButton.click();
+        // https://qa.tripandway.com adresine gidilir:
+        // Kullanıcı girişi yapmak için login butonuna tıklanır:
+        // Login sayfasında email ve password dataları girilir.
 
-        Faker faker =new Faker();
-        Actions actions = new Actions(Driver.getDriver());
-        actions.click(tripandwaypage.loginEmailTextbox)
-                .sendKeys(faker.internet().emailAddress())
-                .sendKeys(Keys.TAB)
-                .sendKeys(faker.internet().password())
-                .sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+        ReusableMethods.loginMethod(ConfigReader.getProperty("loginEmailGirisHilal"),ConfigReader.getProperty("loginGirisSifreHilal"));
 
+        // Payment History Butonuna tıklanır:
+        TripandwayPage tripandwaypage = new TripandwayPage();
         tripandwaypage.paymentHistoryButton.click();
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(tripandwaypage.viewAllPaymentsYazisi.isDisplayed());
-        softAssert.assertTrue(tripandwaypage.getViewAllPaymentsTable.isDisplayed());
 
-        softAssert.assertAll();
+        // Ödeme geçmişinin görünürlüğü doğrulanır:
+
+        ReusableMethods.waitForVisibility(tripandwaypage.viewAllPaymentsYazisi,5);
+        ReusableMethods.assertElementisDisplayedMethod(tripandwaypage.viewAllPaymentsYazisi);
+
         Driver.closeDriver();
     }
 }
