@@ -653,6 +653,32 @@ public class TripandwayPage {
     // Destinations sayfasindaki, 'Sair ne anlatiyor' paketi elementi
     public WebElement sairNeAnlatiyorElm;
 
+    @FindBy(xpath = "//*[text()='Featured Packages']")
+    public WebElement featuredpackagesElementi;
+
+    @FindBy(xpath = "(//a[text()='3 days in Buenos Aires'])[2]")
+    public WebElement three_days_in_buenos;
+
+    @FindBy(xpath = "(//a[text()='10 days in Buenos Aires'])[2]")
+    public WebElement ten_days_in_buenos;
+
+    @FindBy(xpath = "(//a[text()='3 days in Bangkok'])[2]")
+    public WebElement three_days_in_bangkok;
+
+    @FindBy(xpath = "(//a[text()='7 days in Salina Island'])[2]")
+    public WebElement seven_days_in_salina_island;
+
+    @FindBy(xpath = "//div[@class='bannder-table']")
+    public  WebElement featuredPackagesGirilenSayfaElementi;
+
+
+    @FindBy(xpath = "//h3[text()='Latest Packages']")
+    public WebElement latestPackagesElementi;
+
+
+    @FindBy(xpath = "//div[@class='bannder-table']")
+    public  WebElement latestPackagesGirilenSayfaElementi;
+
 
 
 }
