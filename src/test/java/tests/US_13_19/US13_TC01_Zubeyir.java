@@ -1,66 +1,114 @@
 package tests.US_13_19;
 
+import com.aventstack.extentreports.ExtentTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.TripandwayPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US13_TC01_Zubeyir {
+import java.util.List;
+
+public class US13_TC01_Zubeyir extends TestBaseRapor {
+
 
     TripandwayPage tripandwayPage;
     @Test
-    public void DestinationsSayfasiTesti(){
+    public void destinationsGorunurlukTesti(){
 
-        // Bu test methodundaki destinations paketleri 8 adet olup sayisi az oldugu icin,
-        // SoftAssert yerine Assert test kullanildi.
+        extentTest = extentReports.createTest("'US13_TC01_ZUBEYIR' Kullanici Anasayfadaki 'Destinations' Sekmesinin Gorunurluk Testi");
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        tripandwayPage = new TripandwayPage();
 
-
-        // Kullaniici;
-        //Anasayfaya gider ve cookies' deki ACCEPT butonuna click yapar,
+        // Kullanici;
+        // Trip and Way Anasayfaya gider.
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
-        //ReusableMethods.wait(5);
-        tripandwayPage.anasayfaCookiesElm.click();
+        extentTest.info("Trip and Way Anasayfaya gidildi.");
 
-        //Destinations sayfasına click yapar.
+        // Destinations sekmesine click yapar.
         tripandwayPage.destinationsElementi.click();
+        extentTest.info("'Destinations' sekmesine gidildi");
 
-        //Destinations sayfasının görünür oldugu doğrulanır
+        // cookies' i ACCEPT butonuna basarak kabul eder.
+        tripandwayPage.anasayfaCookiesElm.click();
+        extentTest.info("Cookies kabul edildi");
+
+        // Destinations sekmesinin gorunur oldugunu dogrular.
         Assert.assertTrue(tripandwayPage.destinationsYazisiElm.isDisplayed());
+        extentTest.pass("'Destinations' sekmesinin gorunur oldugu dogrulandi.");
 
-        //Destinations sayfası'nda bulunan paketlerin görünürlüğü doğrulanır
-            // 'Bangkok,Thailand' paketi
-            Assert.assertTrue(tripandwayPage.bangkokThailandPakElm.isDisplayed());
+        // Sayfayi kapatir.
+        Driver.closeDriver();
+    }
 
-            // 'Greenville,South Carolina' paketi
-            Assert.assertTrue(tripandwayPage.greenvilleSCPakElm.isDisplayed());
+    @Test
+    public void destinationsPaketGorunurlukTesti() throws InterruptedException{
 
-            // 'Buenos Aires,Argentina' paketi
-            Assert.assertTrue(tripandwayPage.buenosAiresArgentinaPakElm.isDisplayed());
+        extentTest = extentReports.createTest("'US13_TC01_ZUBEYIR' 'Destinations' Sekmesindeki Paketlerin Gorunurluk ve Aktiflik Testi");
 
-            // 'Marrakesh,Morocco' paketi
-            Assert.assertTrue(tripandwayPage.marrakeshMoraccoElm.isDisplayed());
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        tripandwayPage = new TripandwayPage();
 
-            // 'Salina Island,Italy' paketi
-            Assert.assertTrue(tripandwayPage.salinaIslandItalyElm.isDisplayed());
+        // Kullanici;
+        // Anasayfaya gider.
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
+        extentTest.info("Trip and Way anasayfaya gidildi.");
 
-            // 'Istanbul,Turkey' paketi
-            Assert.assertTrue(tripandwayPage.istanbulTurkeyElm.isDisplayed());
+        // cookies' i ACCEPT butonuna basarak kabul eder.
+        tripandwayPage.anasayfaCookiesElm.click();
+        extentTest.info("Cookies kabul edildi");
 
-            // 'California, USA' paketi
-            Assert.assertTrue(tripandwayPage.californiaUSAElm.isDisplayed());
+        // Destinations sekmesine click yapar.
+        tripandwayPage.destinationsElementi.click();
+        extentTest.info("'Destinations' sekmesine gidildi");
 
-            // 'asfas' paketi
-            Assert.assertTrue(tripandwayPage.asfasElementi.isDisplayed());
+        // Destinations sekmesi' nde bulunan paketlerin gorunurlugunu ve aktifligini doğrular.
 
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.bangkokThailandPakElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
 
-        //Destinations sayfası'nda bulunan paketler seçilerek ilgili sayfalara gidilir
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.greenvilleSCPakElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
 
-        //Paketler ile ilgili sayfaların görünürlüğü doğrulanır
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.buenosAiresArgentinaPakElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
 
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.marrakeshMoraccoElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
 
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.salinaIslandItalyElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
 
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.istanbulTurkeyElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
+        extentTest.pass("'Destinations' sekmesindeki tum paketlerin gorunur ve aktif oldugu dogrulandi.");
+
+        // Sayfayi kapatir.
+        Driver.closeDriver();
 
     }
 }

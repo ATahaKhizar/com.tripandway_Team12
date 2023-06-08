@@ -233,6 +233,42 @@ public class TripandwayPage {
     //  Admin Sayfasi admin34 Linki Altı Logout Linki
     public WebElement logoutLinki;
 
+   @FindBy(xpath = "//img[@class='img-profile rounded-circle']")
+   //Admin panel sayfasi admin isim ve profil resmi linki
+   public WebElement adminProfilResmiLinki;
+
+   @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
+   // Admin paneli Change Password linki
+   public WebElement adminChangePasswordLinki;
+
+   @FindBy (xpath = "//div[@class='container-fluid']")
+   // Admin Paneli change password sayfasi
+   public WebElement adminChangePasswordPage;
+
+   @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+   // Admin paneli Change Photo linki
+   public WebElement adminChangePhotoLinki;
+
+   @FindBy(xpath = "//h1[text()='Edit Photo']")
+   // Admin Edit Photo Yazısı elmenti
+   public WebElement adminEditPhotoText;
+
+   @FindBy (xpath = "//h1[text()='Edit Profile']")
+   //Admin Edit Profil Yazısı elementi
+   public WebElement adminEditProfilText;
+
+   @FindBy (xpath = "//button[@id='sidebarToggle']")
+   // Admin sol kenar daraltma oku elementi
+   public WebElement adminSolKenarDaraltmaOku;
+
+   @FindBy (xpath = "//div[text()='Admin Panel']")
+   // Admin Panel Yazısı
+   public WebElement adminAdminPanelText;
+
+   @FindBy (xpath = "//a[@class='btn btn-info btn-sm mt-3']")
+   // Admin Paneli Visit Website linki
+   public WebElement adminVisitWebsiteLinki;
+
     // US_35-36-37-41 Bitisi
 
 
@@ -373,25 +409,6 @@ public class TripandwayPage {
     public WebElement instagramElementi;
 
 
-    @FindBy(xpath = "//img[@class='img-profile rounded-circle']")
-    //Admin panel sayfasi admin isim ve profil resmi linki
-    public WebElement adminProfilResmiLinki;
-
-    @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
-    // Admin paneli Change Password linki
-    public WebElement adminChangePasswordLinki;
-
-    @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
-    // Admin paneli Change Photo linki
-    public WebElement adminChangePhotoLinki;
-
-    @FindBy(xpath = "//h1[text()='Edit Photo']")
-    // Admin Edit Photo Yazısı elmenti
-    public WebElement adminEditPhotoText;
-
-    @FindBy (xpath = "//h1[text()='Edit Profile']")
-    //Admin Edit Profil Yazısı elementi
-    public WebElement adminEditProfilText;
 
    // Admin ana sayfasındaki yandaki tiklanabilir sekmelerden packages sekmesi
    @FindBy (xpath = "//span[text()='Packages']")
@@ -629,9 +646,6 @@ public class TripandwayPage {
     // Destinations sayfasindaki, 'California, USA' paketi elementi
     public WebElement californiaUSAElm;
 
-    @FindBy(xpath = "//a[text()='asfas']")
-    // Destinations sayfasindaki, 'asfas' paketi elementi
-    public WebElement asfasElementi;
 
     @FindBy(xpath = "//button[@class='wpcc-btn']")
     public WebElement anasayfaCookiesElm;
@@ -644,6 +658,173 @@ public class TripandwayPage {
     // Kullanıcı anasayfadaki Contact bölümü
     @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/contact'])[2]")
     public WebElement kullaniciAnasayfadakiContact;
+
+
+
+    @FindBy(xpath = "//a[text()='GOZTEPEIzmir']")
+    // Destinations sayfasindaki, 'GOZTEPEIzmir' paketi elementi
+    public WebElement goztepeIzmirElm;
+
+
+    @FindBy(xpath = "//a[text()='Sair ne anlatiyor']")
+    // Destinations sayfasindaki, 'Sair ne anlatiyor' paketi elementi
+    public WebElement sairNeAnlatiyorElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package'])[2]")
+    // Kullanici anasayfadaki 'Packages' sekmesi elementi
+    public WebElement anasayfaPackagesElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/3-days-in-buenos-aires'])[1]")
+    // Packages sayfasindaki, '3 days Buenos' turu elementi
+    public WebElement ucDaysBuenosTuruElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/10-days-in-buenos-aires'])[1]")
+    // Packages sayfasindaki, '10 days Buenos' turu elementi
+    public WebElement onDaysBuenosTuruElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/7-days-in-istanbul'])[1]")
+    // Packages sayfasindaki, '7 days Istanbul' turu elementi
+    public WebElement yediDaysIstanbulTuruElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/3-days-in-bangkok'])[1]")
+    // Packages sayfasindaki, '3 days Bangkok' turu elementi
+    public WebElement ucDaysBangkokTuruElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/7-days-in-salina-island'])[1]")
+    // Packages sayfasindaki, '7 days Salina' turu elementi
+    public WebElement yediDaysSalinaTuruElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/california'])[1]")
+    // Packages sayfasindaki, '5 days California' turu elementi
+    public WebElement besDaysCaliforniaTuruElm;
+
+
+    @FindBy(xpath = "//div[@class='col-md-12 wow fadeIn']")
+    // About Us sayfasindaki, 'Our Mission / Our Vision' yazilari elementi
+    public WebElement aboutUsSayfasindakiYazilarElm;
+
+    @FindBy(xpath = "//*[text()='Featured Packages']")
+    public WebElement featuredpackagesElementi;
+
+
+    // US_9 Newsletter sekmesi
+    @FindBy(xpath = "//input[@name='subs_email']")
+    public WebElement newletter;
+
+    // Submit buttonu
+    @FindBy(xpath = "//input[@value='Submit']")
+    public WebElement submitButton;
+
+    //Checkyour mail button
+    @FindBy(xpath = "//body[@style='overflow-x: hidden;']")
+    public WebElement checkYourMail;
+
+    // Accept button
+    @FindBy(xpath = "//*[text()='ACCEPT']")
+    public WebElement AcceptButton;
+
+    @FindBy(xpath = "(//a[text()='3 days in Buenos Aires'])[2]")
+    public WebElement three_days_in_buenos;
+
+    @FindBy(xpath = "(//a[text()='10 days in Buenos Aires'])[2]")
+    public WebElement ten_days_in_buenos;
+
+    @FindBy(xpath = "(//a[text()='3 days in Bangkok'])[2]")
+    public WebElement three_days_in_bangkok;
+
+    @FindBy(xpath = "(//a[text()='7 days in Salina Island'])[2]")
+    public WebElement seven_days_in_salina_island;
+
+
+    @FindBy(xpath = "//div[@class='bannder-table']")
+    public  WebElement featuredPackagesGirilenSayfaElementi;
+
+    //US_10 Terms and Conditions bolumu
+    @FindBy(xpath = "//*[text()='Terms and Conditions']")
+    public WebElement termsAndConditionsBolum;
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement termsAndConditionsBolumGorunurlugu;
+
+    //US_11 Privace Policy bolumu
+    @FindBy(xpath = "//*[text()='Privacy Policy']")
+    public WebElement  privacPolicyBolum;
+
+    //Privace Policy bolumu görünürlügü
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement  privacPolicyBolumGorunurlugu;
+
+    //US_12 Services bolumu
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/services'])[2]")
+    public WebElement servicesBolum;
+
+    //Sayfanın gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement servicesSayfaGorunurluk;
+
+    //International Tour Sayfası
+    @FindBy(xpath = "//*[@href='https://qa.tripandway.com/service/international-tour']")
+    public WebElement internationalTour;
+
+    //International tour sayfasinin gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement internationalTourSayfaGorunurluk;
+
+    //Adventure Tour sayfasi
+    @FindBy(xpath = "//*[text()='Adventure Tour']")
+    public WebElement adventureTour;
+
+    //Adventure Tour sayfasi gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement adventureTourSayfaGorunurluk;
+
+    //Cultural Tour sayfasi
+    @FindBy(xpath = "//*[@href='https://qa.tripandway.com/service/culture-tour']")
+    public WebElement cultureTourBolumu;
+
+    //Cultural Tour sayfasinin gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement cultureTourSayfaGorunurluk;
+
+    //Bussiness Tour sayfasi
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/service/bussiness-tour']")
+    public WebElement bussinessTourBolumu;
+
+    //Bussiness Tour sayfasinin gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement bussinessTourSayfaGorunurluk;
+
+    //Health Tour sayfasi
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/service/health-tour']")
+    public WebElement healthTourBolumu;
+
+    //Health Tour sayfasinin gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement healthTourSayfaGorunurluk;
+
+    //Religious Tour sayfasi
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/service/religious-tour']")
+    public WebElement religiousBolumu;
+
+    //Religious Tour sayfasinin gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement religiousTourSayfaGorunurluk;
+
+
+    @FindBy(xpath = "//h3[text()='Latest Packages']")
+    public WebElement latestPackagesElementi;
+
+
+    @FindBy(xpath = "//div[@class='bannder-table']")
+    public  WebElement latestPackagesGirilenSayfaElementi;
+
+
 
 
 }
