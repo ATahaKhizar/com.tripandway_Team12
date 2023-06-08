@@ -9,6 +9,7 @@ import org.testng.asserts.SoftAssert;
 import pages.TripandwayPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.List;
 
