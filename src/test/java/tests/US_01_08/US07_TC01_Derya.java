@@ -113,6 +113,7 @@ public class US07_TC01_Derya extends TestBaseRapor {
         extentTest.pass("Kullanici Facebook adresine gider");
         softAssert.assertAll();
         extentTest.pass("soft assert ile yapilan tum testleri kapatir");
+        Driver.closeDriver();
     }
         @Test
         public void Test03() throws InterruptedException {
@@ -155,6 +156,7 @@ public class US07_TC01_Derya extends TestBaseRapor {
             extentTest.pass("Kullanici twitter sayfasina gider");
             softAssert.assertAll();
             extentTest.pass("soft assert ile yapilan tum testleri kapatir");
+            Driver.closeDriver();
         }
 
         @Test
@@ -196,6 +198,7 @@ public class US07_TC01_Derya extends TestBaseRapor {
             extentTest.pass("Kullanici Linkedin sayfasina tiklar");
             softAssert.assertAll();
             extentTest.pass("soft assert ile yapilan tum testleri kapatir");
+            Driver.closeDriver();
 
         }
 
@@ -235,6 +238,7 @@ public class US07_TC01_Derya extends TestBaseRapor {
             softAssert.assertTrue(actualTitle4.contains(expectedTitle4), "Pinterest sayfasina gitmedi");
             softAssert.assertAll();
             extentTest.pass("soft assert ile yapilan tum testleri kapatir");
+            Driver.closeDriver();
         }
 
         @Test
@@ -275,6 +279,7 @@ public class US07_TC01_Derya extends TestBaseRapor {
              extentTest.pass("Kullanici Instagram sayfasina gider");
              softAssert.assertAll();
              extentTest.pass("soft assert ile yapilan tum testleri kapatir");
+             Driver.quitDriver();
     }
     }
 
