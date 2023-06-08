@@ -7,52 +7,57 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Driver {
 
-    private static WebDriver driver;
-    private Driver(){
-       /*
-       Singleton pattern kullanilarak istenmeyen yontemlerle
-       driver objesine erisilmesini engelledik.
+    public class Driver {
+        private static WebDriver driver;
 
-       Constructor'i private yaparak bu class' dan obje olusturularak
-       class uyelerinin kullanilmasinin onune gectik.
-       */
-    }
+        private Driver() {
+        /* Singleton pattern kullanilarak istenmeyen yontemlerle
+           driver objesine erisilmesini engelledik
 
-    public static WebDriver getDriver(){
+           Constructor'i private yaparak bu class'dan obje olusturularak
+           class uyelerinin kullanilmasinin onune gectik
 
-        String istenenBrowser = ConfigReader.getProperty("browser");
-        // chrome, firefox, safari, edge
+         */
+        }
+
+        public static WebDriver getDriver() {
 
 
-        if (driver==null){
+            String istenenBrowser = ConfigReader.getProperty("browser");
+            // chrome, firefox, safari, edge
 
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+
+            if (driver == null) {
+
+                switch (istenenBrowser) {
+                    default -> {
+                        WebDriverManager.chromedriver().setup();
+                        driver = new ChromeDriver();
+                    }
+                }
+
+                driver.manage().window().maximize();
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
             }
 
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
-        return driver;
-    }
-
-    public static void closeDriver(){
-
-        if (driver != null){
-            driver.close();
-            driver = null;
+            return driver;
         }
 
-    }
 
-    public static void quitDriver(){
+        public static void closeDriver() {
 
-        if (driver != null){
-            driver.quit();
-            driver = null;
+            if (driver != null) {
+                driver.close();
+                driver = null;
+            }
         }
 
+        public static void quitDriver() {
+
+            if (driver != null) {
+                driver.quit();
+                driver = null;
+            }
+        }
     }
-}

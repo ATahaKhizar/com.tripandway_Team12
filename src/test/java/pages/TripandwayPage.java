@@ -463,9 +463,6 @@ public class TripandwayPage {
     // Destinations sayfasindaki, 'California, USA' paketi elementi
     public WebElement californiaUSAElm;
 
-    @FindBy(xpath = "//a[text()='asfas']")
-    // Destinations sayfasindaki, 'asfas' paketi elementi
-    public WebElement asfasElementi;
 
     @FindBy(xpath = "//button[@class='wpcc-btn']")
     public WebElement anasayfaCookiesElm;
@@ -478,5 +475,16 @@ public class TripandwayPage {
     // Kullanıcı anasayfadaki Contact bölümü
     @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/contact'])[2]")
     public WebElement kullaniciAnasayfadakiContact;
+
+
+    @FindBy(xpath = "//a[text()='GOZTEPEIzmir']")
+    // Destinations sayfasindaki, 'GOZTEPEIzmir' paketi elementi
+    public WebElement goztepeIzmirElm;
+
+
+    @FindBy(xpath = "//a[text()='Sair ne anlatiyor']")
+    // Destinations sayfasindaki, 'Sair ne anlatiyor' paketi elementi
+    public WebElement sairNeAnlatiyorElm;
+
 
 }
