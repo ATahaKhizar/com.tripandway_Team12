@@ -143,7 +143,7 @@ public class TripandwayPage {
     public WebElement packagesButton;
 
     //Package sayfasında 5 Day California butonu
-    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/package/california']")
+    @FindBy(xpath = "(//div[@class='photo-title'])[6]")
     public WebElement californiaButonu;
 
     // California Package'ında "Book Your Seat" butonu
@@ -171,7 +171,7 @@ public class TripandwayPage {
     public WebElement payButton;
 
     //Ödeme yapıldıktan sonra ödemenin başarılı bir şekilde yapıldığını gösteren yazı
-    @FindBy(xpath = "//*[text()='Profile is updated successfully']")
+    @FindBy(xpath = "//*[text()='         toastr.success('Payment is successful!');     ']")
     public WebElement basariliOdemeYapildiYazisi;
 
     //Login sayfasındaki cookies
