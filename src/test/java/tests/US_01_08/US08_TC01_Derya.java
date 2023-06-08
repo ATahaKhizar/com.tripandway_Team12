@@ -45,7 +45,7 @@ public class US08_TC01_Derya extends TestBaseRapor {
         extentTest.pass("email bilgisinin gorunur oldugu dogrulandi");
         System.out.println(tripandwayPage.emailBilgisi.getText());
         softAssert.assertAll();
-        extentTest.pass("soft assert ile yapilan tum testleri kapatir");
+        extentTest.pass("kapatıldı");
         //Driver.closeDriver();
     }
 }
