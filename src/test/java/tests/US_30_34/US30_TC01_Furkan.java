@@ -1,6 +1,5 @@
 package tests.US_30_34;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TripandwayPage;
@@ -9,7 +8,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class US30_TC01 extends TestBaseRapor {
+public class US30_TC01_Furkan extends TestBaseRapor {
 
     @Test
     public void TC_01(){
