@@ -3,6 +3,8 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
+import org.testng.Assert;
+import pages.TripandwayPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -385,5 +387,24 @@ public class ReusableMethods {
 
     public static void waitAndClickLocationText(WebElement element, String value) {
         Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
+    }
+
+    // Siteye giriş methodu:
+    public static void loginMethod (String email, String password) {
+
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
+        TripandwayPage tripandwaypage = new TripandwayPage();
+        tripandwaypage.loginButton.click();
+        Actions actions = new Actions(Driver.getDriver());
+        actions.click(tripandwaypage.loginEmailTextbox)
+                .sendKeys(email)
+                .sendKeys(Keys.TAB)
+                .sendKeys(password)
+                .sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+    }
+
+    // Elementin görüntülendiğini assort etme methodu:
+    public static void assertElementisDisplayedMethod(WebElement element) {
+        Assert.assertTrue(element.isDisplayed());
     }
 }
