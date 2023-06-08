@@ -17,7 +17,7 @@ public class US13_TC01_Zubeyir {
 
     TripandwayPage tripandwayPage;
     @Test
-    public void test01(){
+    public void destinationsGorunurlukTesti(){
 
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
 
@@ -55,23 +55,24 @@ public class US13_TC01_Zubeyir {
     }
 
     @Test
-    public void test02() throws InterruptedException {
+    public void destinationsPaketGorunurlukTesti() throws InterruptedException {
 
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         tripandwayPage = new TripandwayPage();
 
         // Kullaniici;
-        //Anasayfaya gider
+        // Anasayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
 
         // cookies' de ACCEPT butonuna basar.
         tripandwayPage.anasayfaCookiesElm.click();
 
-        //Destinations sayfasına click yapar.
+        // Destinations sayfasına click yapar.
         tripandwayPage.destinationsElementi.click();
 
-        List<WebElement> list = Driver.getDriver().findElements(By.xpath("//div[@class='col-md-4 col-xs-6 clear-three wow fadeIn']/div/a"));
 
+        // Destinations sayfasi' nda bulunan paketlerin gorunurlugunu ve aktifligini doğrular
+        List<WebElement> list = Driver.getDriver().findElements(By.xpath("//div[@class='col-md-4 col-xs-6 clear-three wow fadeIn']/div/a"));
 
         jse.executeScript("arguments[0].scrollIntoView(true);"
                 + "arguments[0].click()",tripandwayPage.bangkokThailandPakElm);
@@ -112,7 +113,5 @@ public class US13_TC01_Zubeyir {
         Driver.closeDriver();
 
     }
-
-
 
 }
