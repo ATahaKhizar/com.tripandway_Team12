@@ -5,19 +5,21 @@ import org.testng.asserts.SoftAssert;
 import pages.TripandwayPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class US35_TC01_AhmetY extends TestBaseRapor {
+public class US41_TC04_AhmetY extends TestBaseRapor {
 
     TripandwayPage tripandwayPage;
     SoftAssert softAssert;
 
     @Test
-    public void allSubscriberGorunurlukTesti() {
-        extentTest = extentReports.createTest("All Subscribers Testi",
-                "Kullanici admin panel sayfasinda tum haber listesi uyelerini goruntuleyebilmeli");
+    public void logoutTesti() {
 
-        //  1-> Admin login sayfasina gidilir.Admin Login Url = https://qa.tripandway.com/admin/login
+        extentTest = extentReports.createTest("Logout Testi",
+                "Kullanici admin panel sayfasinda Logout linkine basip Site Ekranina gidebilmeli");
+
+        // 1-> Admin login sayfasina gidilir.Admin Login Url = https://qa.tripandway.com/admin/login
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayAdminURL"));
         extentTest.info("Kullanici Admin Panel sayfasina gider.");
 
@@ -36,17 +38,30 @@ public class US35_TC01_AhmetY extends TestBaseRapor {
                 "Admin Panel sayfasinda degilsiniz");
         extentTest.pass("Admin Panel sayfasinda oldugunu dogrular.");
 
-        // 4-> Subscriber(Haber Listesi) Linkine Tıklanır-All Subscribers seceneğinin gorundugu dogrulanır.
+        //4-> admin34 (profil-foto) linkine tiklanir acilan alt sekmedeki Logout linkine tiklanir.
+        tripandwayPage.adminProfilResmiLinki.click();
+        ReusableMethods.waitFor(2);
+        tripandwayPage.logoutLinki.click();
+        extentTest.info("Kullanici Logout linkine tiklar.");
+        ReusableMethods.waitFor(1);
 
-        tripandwayPage.subscriberLinki.click();
-        softAssert.assertTrue(tripandwayPage.allSubscribersLinki.isDisplayed()
-                ,"All Subscribers Linki görülemedi");
+        //5->  Gidilen sayfanin site ekranı (Title'inin Tripandway) oldugu dogrulanir.
+        String expectedTitle = "Tripandway";
+        //Gidilen sayfanin Title'i
+        String actualTitle = Driver.getDriver().getTitle();
+
+        softAssert.assertEquals(actualTitle, expectedTitle
+                , "!!!Cıkıs yapıldıktan sonra gidilen sayfa, Site Sayfasi degil");
+        extentTest.info("Gidilen sayfanin Title'inin Tripandway oldugunu dogrular.");
+
 
         softAssert.assertAll();
-        extentTest.pass("Subscriber linkine tiklanip,All Subscribers elementinin gorundugu dogrulanir.");
 
-        // 5-> Browser Kapatilir.
+        extentTest.pass(">SoftAssert ile yapılan tüm testlerin sonucunu raporlar.");
+
+        //6-> Browser Kapatilir.
         Driver.closeDriver();
         extentTest.info("Sayfayi kapatir");
+
     }
 }
