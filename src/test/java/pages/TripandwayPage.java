@@ -653,6 +653,45 @@ public class TripandwayPage {
     // Destinations sayfasindaki, 'Sair ne anlatiyor' paketi elementi
     public WebElement sairNeAnlatiyorElm;
 
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package'])[2]")
+    // Kullanici anasayfadaki 'Packages' sekmesi elementi
+    public WebElement anasayfaPackagesElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/3-days-in-buenos-aires'])[1]")
+    // Packages sayfasindaki, '3 days Buenos' turu elementi
+    public WebElement ucDaysBuenosTuruElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/10-days-in-buenos-aires'])[1]")
+    // Packages sayfasindaki, '10 days Buenos' turu elementi
+    public WebElement onDaysBuenosTuruElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/7-days-in-istanbul'])[1]")
+    // Packages sayfasindaki, '7 days Istanbul' turu elementi
+    public WebElement yediDaysIstanbulTuruElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/3-days-in-bangkok'])[1]")
+    // Packages sayfasindaki, '3 days Bangkok' turu elementi
+    public WebElement ucDaysBangkokTuruElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/7-days-in-salina-island'])[1]")
+    // Packages sayfasindaki, '7 days Salina' turu elementi
+    public WebElement yediDaysSalinaTuruElm;
+
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/california'])[1]")
+    // Packages sayfasindaki, '5 days California' turu elementi
+    public WebElement besDaysCaliforniaTuruElm;
+
+
+    @FindBy(xpath = "//div[@class='col-md-12 wow fadeIn']")
+    // About Us sayfasindaki, 'Our Mission / Our Vision' yazilari elementi
+    public WebElement aboutUsSayfasindakiYazilarElm;
+
 
 
 }
