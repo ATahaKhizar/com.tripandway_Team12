@@ -1,5 +1,6 @@
 package tests.US_35_41;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -8,7 +9,9 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US39_TC01_Nurettin {
+import java.util.concurrent.ConcurrentHashMap;
+
+public class US40_TC01_Nurettin {
 
     TripandwayPage tripandwayPage;
 
@@ -16,33 +19,35 @@ public class US39_TC01_Nurettin {
     @Test
     public void test01(){
 
-        //---ADMİN HESABI FOTOĞRAF DEĞİŞTİRME EKRANININ GÖRÜNTÜLENEBİLDİĞİ DOĞRULANABİLMELİ---//
+        // -- ADMİN SAYFASINDAKİ MENÜNÜN ALTINDA YER ALAN DARALTMA OK İŞARETİNİ TIKLAYIP ÇALIŞTIĞI DOĞRULANABİLMELİ
 
-
-        // Admin ana sayfasına gidilir
+        // Admin anasayfasına gidilir
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayAdminURL"));
 
+        tripandwayPage=new TripandwayPage();
+
         // Admin Login ekranında doğru kullanıcı adı ve şifre ile login olunur
-        tripandwayPage= new TripandwayPage();
         tripandwayPage.adminLoginSayfasiEmailKutusu.sendKeys(ConfigReader.getProperty("tripandwayAdminEmail"));
         tripandwayPage.adminLoginSayfasiPasswordKutusu.sendKeys(ConfigReader.getProperty("tripandwayAdminPassword"));
         tripandwayPage.adminLoginSayfasiLoginButonu.click();
+        ReusableMethods.waitFor(2);
 
+        //Admin sayfasındaki menünün altında yer alan daraltma ok işaretine tıklanır (paneli daraltma)
+        tripandwayPage.adminSolKenarDaraltmaOku.click();
+        ReusableMethods.waitFor(2);
 
-        // Admin profil picture.na tıklanır
-        tripandwayPage.adminProfilResmiLinki.click();
-
-
-        // Dropdown menüden Change Photo linkine tıklanır
-        tripandwayPage.adminChangePhotoLinki.click();
-
-
-        // Fotoğraf değiştirme ekranın görüntüelendiğinin doğrulanması
-        softAssert.assertTrue(tripandwayPage.adminEditPhotoText.isDisplayed(), "fotoğraf değiştirme ekranı görüntülenmedi");
+        //Daraltma ok işaretinin çalıştığının doğrulanması
+        softAssert.assertTrue(!tripandwayPage.adminAdminPanelText.isDisplayed(), "Daraltma ok işareti çalışmıyor");
 
         softAssert.assertAll();
 
-        Driver.closeDriver();
+    Driver.closeDriver();
+
+
+
 
     }
+
+
+
 }
