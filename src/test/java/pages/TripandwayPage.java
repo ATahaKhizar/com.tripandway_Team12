@@ -67,6 +67,42 @@ public class TripandwayPage {
     //  Admin Sayfasi admin34 Linki Altı Logout Linki
     public WebElement logoutLinki;
 
+   @FindBy(xpath = "//img[@class='img-profile rounded-circle']")
+   //Admin panel sayfasi admin isim ve profil resmi linki
+   public WebElement adminProfilResmiLinki;
+
+   @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
+   // Admin paneli Change Password linki
+   public WebElement adminChangePasswordLinki;
+
+   @FindBy (xpath = "//div[@class='container-fluid']")
+   // Admin Paneli change password sayfasi
+   public WebElement adminChangePasswordPage;
+
+   @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+   // Admin paneli Change Photo linki
+   public WebElement adminChangePhotoLinki;
+
+   @FindBy(xpath = "//h1[text()='Edit Photo']")
+   // Admin Edit Photo Yazısı elmenti
+   public WebElement adminEditPhotoText;
+
+   @FindBy (xpath = "//h1[text()='Edit Profile']")
+   //Admin Edit Profil Yazısı elementi
+   public WebElement adminEditProfilText;
+
+   @FindBy (xpath = "//button[@id='sidebarToggle']")
+   // Admin sol kenar daraltma oku elementi
+   public WebElement adminSolKenarDaraltmaOku;
+
+   @FindBy (xpath = "//div[text()='Admin Panel']")
+   // Admin Panel Yazısı
+   public WebElement adminAdminPanelText;
+
+   @FindBy (xpath = "//a[@class='btn btn-info btn-sm mt-3']")
+   // Admin Paneli Visit Website linki
+   public WebElement adminVisitWebsiteLinki;
+
     // US_35-36-37-41 Bitisi
 
 
@@ -207,25 +243,6 @@ public class TripandwayPage {
     public WebElement instagramElementi;
 
 
-    @FindBy(xpath = "//img[@class='img-profile rounded-circle']")
-    //Admin panel sayfasi admin isim ve profil resmi linki
-    public WebElement adminProfilResmiLinki;
-
-    @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
-    // Admin paneli Change Password linki
-    public WebElement adminChangePasswordLinki;
-
-    @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
-    // Admin paneli Change Photo linki
-    public WebElement adminChangePhotoLinki;
-
-    @FindBy(xpath = "//h1[text()='Edit Photo']")
-    // Admin Edit Photo Yazısı elmenti
-    public WebElement adminEditPhotoText;
-
-    @FindBy (xpath = "//h1[text()='Edit Profile']")
-    //Admin Edit Profil Yazısı elementi
-    public WebElement adminEditProfilText;
 
 
     // US_30 Sonu
