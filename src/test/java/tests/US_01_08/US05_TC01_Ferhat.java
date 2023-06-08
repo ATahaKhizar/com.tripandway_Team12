@@ -13,7 +13,7 @@ import utilities.TestBaseRapor;
 
 import java.util.List;
 
-public class userStory05_Latest_Packages extends TestBaseRapor {
+public class US05_TC01_Ferhat extends TestBaseRapor {
 
     @Test
     public void Test01() throws InterruptedException {

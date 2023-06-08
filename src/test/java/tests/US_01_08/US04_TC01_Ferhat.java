@@ -8,7 +8,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class userStory04_Featured_Packages extends TestBaseRapor {
+public class US04_TC01_Ferhat extends TestBaseRapor {
     @Test
     public void Test01() throws InterruptedException {
         //FEATURED PACKAGES YAZISININ AKTIFLIGINI DOGRULAMA
