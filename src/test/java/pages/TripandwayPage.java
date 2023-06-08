@@ -824,6 +824,166 @@ public class TripandwayPage {
     @FindBy(xpath = "//div[@class='bannder-table']")
     public  WebElement latestPackagesGirilenSayfaElementi;
 
+    @FindBy(xpath = "//body[@style='overflow-x: hidden;']")
+    public WebElement exploreTheWorld;
+
+    @FindBy(xpath = "(//*[@href='https://tripandway.com/package/3-days-in-bangkok'])[1]")
+    public WebElement readMore;
+
+    @FindBy(xpath = "//*[@class='fas fa-caret-right']")
+    public WebElement sagYon;
+
+    @FindBy(xpath = "//body[@style='overflow-x: hidden;']")
+    public WebElement theWorldIsSoBeautiful;
+
+    @FindBy(xpath = "(//a[@href='https://tripandway.com/package/7-days-in-istanbul'])[2]")
+    public WebElement theWorldReadMore;
+
+    @FindBy(xpath = "//*[@class='fas fa-caret-left']")
+    public WebElement solYon;
+
+    @FindBy(xpath = "(//h1[@class='fadeInDown animated'])[2]")
+    public WebElement salinaIsland;
+
+    @FindBy(xpath = "(//a[@href='https://tripandway.com/package/7-days-in-salina-island'])[1]")
+    public WebElement salinaReadMore;
+
+    @FindBy(xpath = "//h2[text()='Our Services']")
+    public WebElement ourServices;
+
+    @FindBy(xpath = "//*[@type='button']")
+    public WebElement acceptButton;
+
+
+    //@FindBy(xpath = "//h4[text()='Adventure Tour']")
+    //public WebElement adventureTour;
+
+    @FindBy(xpath = "//h4[text()='Culture Tour']")
+    public WebElement cultureTour;
+
+    @FindBy(xpath = "//h4[text()='Bussiness Tour']")
+    public WebElement bussinessTour;
+
+    @FindBy(xpath = "//h4[text()='Health Tour']")
+    public WebElement healthTour;
+
+    @FindBy(xpath = "//h4[text()='Religious Tour']")
+    public WebElement religiousTour;
+
+    @FindBy(xpath = "//h2[text()='FEATURED PACKAGES']")
+    public WebElement featuredPackages;
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/package/3-days-in-bangkok'])[1]")
+    public WebElement ucDaysinBangkok;
+
+    @FindBy(xpath = "(//h4//a[text()='7 days in Salina Island']")
+    public WebElement yediDaysinSalina;
+
+    @FindBy(xpath = "(//a[@href='https://tripandway.com/package/3-days-in-buenos-aires'])[1]")
+    public WebElement ucDaysinBuenos;
+
+    @FindBy(xpath = "(//a[@href='https://tripandway.com/package/10-days-in-buenos-aires'])[1]")
+    public WebElement onDaysinBuenos;
+
+    @FindBy(xpath = "(//a[@href='https://tripandway.com/package/california'])[1]")
+    public WebElement besDayCalifornia;
+
+    @FindBy(xpath = "(//div[@class='owl-dot'])[3]")
+    public WebElement solaKaydirma;
+
+    @FindBy(xpath = "(//div[@class='owl-dot active'])[2]")
+    public WebElement sagaKaydirma;
+
+    @FindBy(xpath = "//div[@class='bg-counterup']")
+    public WebElement conterUp;
+
+    @FindBy(xpath = "//h2[text()='Destination']")
+    public WebElement destination;
+
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/destination/bangkok-thailand']")
+    public WebElement bangkokThailand;
+
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/destination/greenville-south-carolina']")
+    public WebElement greenville;
+
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/destination/buenos-aires-argentina']")
+    public WebElement buenosAires;
+
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/destination/marrakesh-morocco']")
+    public WebElement marrakesh;
+
+    @FindBy(xpath = "//a[text()='Salina Island, Italy']")
+    public WebElement salina;
+
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/destination/istanbul']")
+    public WebElement istanbul;
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/destination'])[3]")
+    public WebElement seeAllDestination;
+
+    @FindBy(xpath = "//*[text()='Team Members']")
+    public WebElement teamMembers;
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/team-member/zara-williams'])[2]")
+    public WebElement zaraWilliams;
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/team-member/jaxon-green'])[2]")
+    public WebElement jaxonGreen;
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/team-member/avery-johnson'])[2]")
+    public WebElement averyJohnson;
+
+    @FindBy(xpath = "(//a[@href='https://qa.tripandway.com/team-member/knox-mitchell'])[2]")
+    public WebElement knoxMitchell;
+
+    @FindBy(xpath = "(//div[@class='testimonial-text'])[4]")
+    public WebElement jessicaRainy;
+
+    @FindBy(xpath = "(//div[@class='testimonial-text'])[3]")
+    public WebElement stefenCarman;
+
+    @FindBy(xpath = "(//div[@class='testimonial-text'])[2]")
+    public WebElement davidSmith;
+
+    @FindBy(xpath = "(//div[@class='testimonial-text'])[1]")
+    public WebElement johnsonShealey;
+
+    @FindBy(xpath = "//h2[text()='Latest Blog']")
+    public WebElement latestBlog;
+
+    @FindBy(xpath = "(//*[text()='Discovering the Ancient Capital of the Hittites: Bogazkale and Hattusas'])[1]")
+    public WebElement discoverBogazKale;
+
+    @FindBy(xpath = "(//*[text()='Salina Island: A Perfect Family Getaway'])[1]")
+    public WebElement aPerfectFamily;
+
+    @FindBy(xpath = "(//*[text()='Istanbul: A Fusion of East and West'])[1]")
+    public WebElement istanbulAfusion;
+
+    @FindBy(xpath = "(//*[@src='https://qa.tripandway.com/public/uploads/blog-8.jpg'])[1]")
+    public WebElement bangkokAcity;
+
+    @FindBy(xpath = "(//*[text()='Buenos Aires: The Paris of South America'])[2]")
+    public WebElement buenoss;
+
+    @FindBy(xpath = "(//*[text()='Discovering Greenville: A Hidden Gem in South Carolina'])[2]")
+    public WebElement discovering;
+
+    @FindBy(xpath = "//*[text()='Testimonial']")
+    public WebElement testiMonial;
+
+    @FindBy(xpath = "(//div[@class='owl-dot'])[4]")
+    public WebElement testiMonialSolClick;
+
+    @FindBy(xpath = "(//div[@class='owl-dot active'])[4]")
+    public WebElement stefenClick;
+
+    @FindBy(xpath = "(//div[@class='owl-dot'])[6]")
+    public WebElement jessicaClick;
+
+    @FindBy(xpath = "//h2[text()='OUR CLIENT']")
+    public WebElement ourClient;
+
 
 
 
