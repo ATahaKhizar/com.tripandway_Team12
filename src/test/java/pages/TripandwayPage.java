@@ -175,10 +175,92 @@ public class TripandwayPage {
 
     // US_30 Sonu
 
+    // US_9 Newsletter sekmesi
+    @FindBy(xpath = "//input[@name='subs_email']")
+    public WebElement newletter;
+
+    // Submit buttonu
+    @FindBy(xpath = "//input[@value='Submit']")
+    public WebElement submitButton;
+
+    //Checkyour mail button
+    @FindBy(xpath = "//body[@style='overflow-x: hidden;']")
+    public WebElement checkYourMail;
+
+    // Accept button
+    @FindBy(xpath = "//*[text()='ACCEPT']")
+    public WebElement AcceptButton;
 
 
+    //US_10 Terms and Conditions bolumu
+    @FindBy(xpath = "//*[text()='Terms and Conditions']")
+    public WebElement termsAndConditionsBolum;
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement termsAndConditionsBolumGorunurlugu;
 
+    //US_11 Privace Policy bolumu
+    @FindBy(xpath = "//*[text()='Privacy Policy']")
+    public WebElement  privacPolicyBolum;
 
+    //Privace Policy bolumu görünürlügü
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement  privacPolicyBolumGorunurlugu;
+
+    //US_12 Services bolumu
+    @FindBy(xpath = "(//*[@href='https://qa.tripandway.com/services'])[2]")
+    public WebElement servicesBolum;
+
+    //Sayfanın gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement servicesSayfaGorunurluk;
+
+    //International Tour Sayfası
+    @FindBy(xpath = "//*[@href='https://qa.tripandway.com/service/international-tour']")
+    public WebElement internationalTour;
+
+    //International tour sayfasinin gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement internationalTourSayfaGorunurluk;
+
+    //Adventure Tour sayfasi
+    @FindBy(xpath = "//*[text()='Adventure Tour']")
+    public WebElement adventureTour;
+
+    //Adventure Tour sayfasi gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement adventureTourSayfaGorunurluk;
+
+    //Cultural Tour sayfasi
+    @FindBy(xpath = "//*[@href='https://qa.tripandway.com/service/culture-tour']")
+    public WebElement cultureTourBolumu;
+
+    //Cultural Tour sayfasinin gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement cultureTourSayfaGorunurluk;
+
+    //Bussiness Tour sayfasi
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/service/bussiness-tour']")
+    public WebElement bussinessTourBolumu;
+
+    //Bussiness Tour sayfasinin gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement bussinessTourSayfaGorunurluk;
+
+    //Health Tour sayfasi
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/service/health-tour']")
+    public WebElement healthTourBolumu;
+
+    //Health Tour sayfasinin gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement healthTourSayfaGorunurluk;
+
+    //Religious Tour sayfasi
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/service/religious-tour']")
+    public WebElement religiousBolumu;
+
+    //Religious Tour sayfasinin gorunurlugu
+    @FindBy(xpath = "//*[@style='overflow-x: hidden;']")
+    public WebElement religiousTourSayfaGorunurluk;
 
 
 
