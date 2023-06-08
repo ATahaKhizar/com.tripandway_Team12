@@ -21,7 +21,7 @@ public class US05_TC01_Ferhat extends TestBaseRapor {
         extentTest=extentReports.createTest("US_05 Latest Packages Testi ","Kullanici latest Packages Yazisini Gorebilmeli");
 
         // Sayfaya gidilir
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         extentTest.info(" Kullanici tripandway sayfasina gider");
 
 
@@ -50,7 +50,7 @@ public class US05_TC01_Ferhat extends TestBaseRapor {
         extentTest = extentReports.createTest("US_05 Latest Packages Ogeleri Testi","Kullanici Latest packages ogelerini gorebilmeli");
 
         // sayfaya gidilir
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         extentTest.info("Kullanici tripandway sayfasina girer");
 
         // Sayfanın Footer bölümüne inilir
@@ -79,7 +79,7 @@ public class US05_TC01_Ferhat extends TestBaseRapor {
         extentTest = extentReports.createTest("US_05 Latest Packages Aktiflik Testi ","Kullanici latest packages altindaki ogeleri aktif kullanir");
 
         // Sayfaya gidilir
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         extentTest.info("Kullanici tripanway sayfasina gider");
 
         // Sayfanın Footer bölümüne inilir
@@ -103,7 +103,7 @@ public class US05_TC01_Ferhat extends TestBaseRapor {
         extentTest = extentReports.createTest("US_05 Latest Packages Aktiflik Testi ","Kullanici latest packages altindaki ogeleri aktif kullanir");
 
         // Sayfaya gidilir
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         extentTest.info("Kullanici tripanway sayfasina gider");
 
         // Sayfanın Footer bölümüne inilir
@@ -127,7 +127,7 @@ public class US05_TC01_Ferhat extends TestBaseRapor {
         extentTest = extentReports.createTest("US_05 Latest Packages Aktiflik Testi ","Kullanici latest packages altindaki ogeleri aktif kullanir");
 
         // Sayfaya gidilir
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         extentTest.info("Kullanici tripanway sayfasina gider");
 
         // Sayfanın Footer bölümüne inilir
@@ -151,7 +151,7 @@ public class US05_TC01_Ferhat extends TestBaseRapor {
         extentTest = extentReports.createTest("US_05 Latest Packages Aktiflik Testi ","Kullanici latest packages altindaki ogeleri aktif kullanir");
 
         // Sayfaya gidilir
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         extentTest.info("Kullanici tripanway sayfasina gider");
 
         // Sayfanın Footer bölümüne inilir
@@ -175,7 +175,7 @@ public class US05_TC01_Ferhat extends TestBaseRapor {
         extentTest = extentReports.createTest("US_05 Latest Packages Aktiflik Testi ","Kullanici latest packages altindaki ogeleri aktif kullanir");
 
         // Sayfaya gidilir
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         extentTest.info("Kullanici tripanway sayfasina gider");
 
         // Sayfanın Footer bölümüne inilir

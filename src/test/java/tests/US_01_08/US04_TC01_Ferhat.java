@@ -16,7 +16,7 @@ public class US04_TC01_Ferhat extends TestBaseRapor {
 
 
         //sayfaya gidilir
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         extentTest.info(" Kullanici tripandway sayfasina gider");
 
         //Sayfanın Footer bölümüne inilir
@@ -44,7 +44,7 @@ public class US04_TC01_Ferhat extends TestBaseRapor {
 
 
         //sayfaya gidilir
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
         extentTest.info("Kullanici tripandway sayfasina girer");
 
         //Sayfanın Footer bölümüne gidilir
@@ -89,7 +89,8 @@ public class US04_TC01_Ferhat extends TestBaseRapor {
         extentTest = extentReports.createTest("US_04 Featured Packages Aktiflik Testi ","Kullanici fetarued packages altindaki ogeleri aktif kullanir");
 
         //sayfaya gidilir
-        Driver.getDriver().get(ConfigReader.getProperty("tripandwayUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
+        extentTest.info("Kullanici tripandway sayfasina girer");
 
         //Sayfanın Footer bölümüne gidilir
         TripandwayPage tripandwayPage=new TripandwayPage();
