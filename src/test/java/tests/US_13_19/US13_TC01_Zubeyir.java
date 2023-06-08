@@ -1,66 +1,118 @@
 package tests.US_13_19;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.TripandwayPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.util.List;
+
 public class US13_TC01_Zubeyir {
 
     TripandwayPage tripandwayPage;
     @Test
-    public void DestinationsSayfasiTesti(){
+    public void test01(){
 
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+
+        tripandwayPage = new TripandwayPage();
         // Bu test methodundaki destinations paketleri 8 adet olup sayisi az oldugu icin,
         // SoftAssert yerine Assert test kullanildi.
 
 
         // Kullaniici;
-        //Anasayfaya gider ve cookies' deki ACCEPT butonuna click yapar,
+        //Anasayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
-        //ReusableMethods.wait(5);
+
+        //Destinations sayfasına click yapar.
+        tripandwayPage.destinationsElementi.click();
+
+        // cookies' de ACCEPT butonuna basar.
+        tripandwayPage.anasayfaCookiesElm.click();
+
+        //Destinations sayfasının görünür oldugu doğrulanır
+        Assert.assertTrue(tripandwayPage.destinationsYazisiElm.isDisplayed());
+
+
+        jse.executeScript("arguments[0].scrollIntoView();",tripandwayPage.californiaUSAElm);
+
+        List<WebElement> list = Driver.getDriver().findElements(By.xpath("//div[@class='col-md-4 col-xs-6 clear-three wow fadeIn']/div/a"));
+
+        for (WebElement each:list
+             ) {
+            Assert.assertTrue(each.isDisplayed());
+            ReusableMethods.wait(1);
+            System.out.println(each.getText());
+        }
+
+        Driver.closeDriver();
+    }
+
+    @Test
+    public void test02() throws InterruptedException {
+
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        tripandwayPage = new TripandwayPage();
+
+        // Kullaniici;
+        //Anasayfaya gider
+        Driver.getDriver().get(ConfigReader.getProperty("tripandwayURL"));
+
+        // cookies' de ACCEPT butonuna basar.
         tripandwayPage.anasayfaCookiesElm.click();
 
         //Destinations sayfasına click yapar.
         tripandwayPage.destinationsElementi.click();
 
-        //Destinations sayfasının görünür oldugu doğrulanır
-        Assert.assertTrue(tripandwayPage.destinationsYazisiElm.isDisplayed());
-
-        //Destinations sayfası'nda bulunan paketlerin görünürlüğü doğrulanır
-            // 'Bangkok,Thailand' paketi
-            Assert.assertTrue(tripandwayPage.bangkokThailandPakElm.isDisplayed());
-
-            // 'Greenville,South Carolina' paketi
-            Assert.assertTrue(tripandwayPage.greenvilleSCPakElm.isDisplayed());
-
-            // 'Buenos Aires,Argentina' paketi
-            Assert.assertTrue(tripandwayPage.buenosAiresArgentinaPakElm.isDisplayed());
-
-            // 'Marrakesh,Morocco' paketi
-            Assert.assertTrue(tripandwayPage.marrakeshMoraccoElm.isDisplayed());
-
-            // 'Salina Island,Italy' paketi
-            Assert.assertTrue(tripandwayPage.salinaIslandItalyElm.isDisplayed());
-
-            // 'Istanbul,Turkey' paketi
-            Assert.assertTrue(tripandwayPage.istanbulTurkeyElm.isDisplayed());
-
-            // 'California, USA' paketi
-            Assert.assertTrue(tripandwayPage.californiaUSAElm.isDisplayed());
-
-            // 'asfas' paketi
-            Assert.assertTrue(tripandwayPage.asfasElementi.isDisplayed());
+        List<WebElement> list = Driver.getDriver().findElements(By.xpath("//div[@class='col-md-4 col-xs-6 clear-three wow fadeIn']/div/a"));
 
 
-        //Destinations sayfası'nda bulunan paketler seçilerek ilgili sayfalara gidilir
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.bangkokThailandPakElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
 
-        //Paketler ile ilgili sayfaların görünürlüğü doğrulanır
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.greenvilleSCPakElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
 
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.buenosAiresArgentinaPakElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
 
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.marrakeshMoraccoElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
 
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.salinaIslandItalyElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
+
+        jse.executeScript("arguments[0].scrollIntoView(true);"
+                + "arguments[0].click()",tripandwayPage.istanbulTurkeyElm);
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("destination"));
+        Driver.getDriver().navigate().back();
+        Thread.sleep(2000);
+
+        Driver.closeDriver();
 
     }
+
+
+
 }

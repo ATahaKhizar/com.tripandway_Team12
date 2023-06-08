@@ -8,8 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 
-
-
     public class Driver {
         private static WebDriver driver;
 
@@ -63,4 +61,3 @@ import java.time.Duration;
             }
         }
     }
-
