@@ -4,26 +4,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
 import java.time.Duration;
 
 public class Driver {
-    private static WebDriver driver;
-    private Driver(){
-        /*Singleton pattern kullanilarak
-        istenmeyen yöntemlerle driver objesine
-        erisilmesini engelledik
+    static WebDriver driver;
 
-        Constructer'i private yaparak bu classdan
-        obje olusturularak class uyelerinin kullanilmasinin
-        onune gectik.
-
-         */
-
-    }
-
-    public static WebDriver getDriver() {
-
+    public static WebDriver getDriver(){
 
 
         String istenenBrowser = ConfigReader.getProperty("browser");
@@ -33,10 +19,9 @@ public class Driver {
         if(driver == null){
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-         }
-
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        }
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 
         return driver;
@@ -51,20 +36,11 @@ public class Driver {
         }
     }
 
-
     public static void quitDriver(){
-        if(driver!=null){
+
+        if (driver != null){
             driver.quit();
             driver=null;
-
-
         }
-
-
-
-
     }
-
-
 }
-
