@@ -10,8 +10,9 @@ import pages.TripandwayPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US21_TC01_Hilal {
+public class US21_TC01_Hilal extends TestBaseRapor {
     @Test
     public void testCase01(){
 
@@ -21,17 +22,20 @@ public class US21_TC01_Hilal {
         // Kullanıcı girişi yapmak için login butonuna tıklanır:
         // Login sayfasında email ve password dataları girilir.
 
+        extentTest =extentReports.createTest("US_21 Login odeme gecmisini dogrulama testi",
+                                            "Kullanici odeme gecmisini goruntuleyebilmeli");
+
         ReusableMethods.loginMethod(ConfigReader.getProperty("loginEmailGirisHilal"),ConfigReader.getProperty("loginGirisSifreHilal"));
+        extentTest.info("Kullanici login oldu");
 
         // Payment History Butonuna tıklanır:
         TripandwayPage tripandwaypage = new TripandwayPage();
         tripandwaypage.paymentHistoryButton.click();
+        extentTest.info("Payment History Butonuna tiklandi");
 
         // Ödeme geçmişinin görünürlüğü doğrulanır:
-
         ReusableMethods.waitForVisibility(tripandwaypage.viewAllPaymentsYazisi,5);
         ReusableMethods.assertElementisDisplayedMethod(tripandwaypage.viewAllPaymentsYazisi);
-
-        Driver.closeDriver();
+        extentTest.pass("odeme gecmisinin görünürlügü dogrulandi:");
     }
 }
