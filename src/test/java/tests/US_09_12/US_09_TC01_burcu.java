@@ -46,7 +46,7 @@ public class US_09_TC01_burcu extends TestBaseRapor {
 
         // 6-Check the visibility of your mail page verified
         Assert.assertTrue(tripandwayPage.checkYourMail.isDisplayed());
-        extentTest.info("Giris yapilabildigi dogrulanabilmeli");
+        extentTest.pass("Giris yapilabildigi dogrulandi");
 
 
 
