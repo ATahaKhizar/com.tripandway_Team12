@@ -10,7 +10,7 @@ import utilities.TestBaseRapor;
 
 import java.time.Duration;
 
-import static utilities.Driver.driver;
+
 
 
 public class US01_TC01_Zafer extends TestBaseRapor {
