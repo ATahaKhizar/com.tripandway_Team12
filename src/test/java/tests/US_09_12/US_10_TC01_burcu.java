@@ -43,7 +43,7 @@ public class US_10_TC01_burcu extends TestBaseRapor {
         //extentTest.pass("soft assert ile yapilan tum testlerin sonucunu raporlar");
 
         Assert.assertTrue(tripandwayPage.termsAndConditionsBolumGorunurlugu.isDisplayed());
-        extentTest.info("Sayfanin gorunurlugunu dogrulayabilmeli");
+        extentTest.pass("Sayfanin gorunurlugu dogrulandi");
 
 
     }

@@ -35,7 +35,7 @@ public class US_12_TC01_burcu extends TestBaseRapor {
 
         //4-Test the visibility of the page
         Assert.assertTrue(tripandwayPage.servicesSayfaGorunurluk.isDisplayed());
-        extentTest.info("Sayfanin gorunurlugunu dogrulayabilmeli");
+        extentTest.pass("Sayfanin gorunurlugu dogrulandi");
 
         //5-Click on the adventure tour under the all services tab on this page
         tripandwayPage.internationalTour.click();
@@ -43,7 +43,7 @@ public class US_12_TC01_burcu extends TestBaseRapor {
 
         //6-Verify the visibility of the page.
         Assert.assertTrue(tripandwayPage.internationalTourSayfaGorunurluk.isDisplayed());
-        extentTest.info("Sayfanin gorunurlugunu dogrulayabilmeli");
+        extentTest.pass("Sayfanin gorunurlugu dogrulandi");
 
         //7- Click on the adventure tour under the services tab
         tripandwayPage.adventureTour.click();
@@ -51,7 +51,7 @@ public class US_12_TC01_burcu extends TestBaseRapor {
 
         //8-Verify the visibility of the page.
         Assert.assertTrue(tripandwayPage.adventureTourSayfaGorunurluk.isDisplayed());
-        extentTest.info("Sayfanin gorunurlugunu dogrulayabilmeli");
+        extentTest.pass("Sayfanin gorunurlugu dogrulandi");
 
         //9- Click on the cultural tour under the services
         tripandwayPage.cultureTourBolumu.sendKeys(Keys.ENTER);
@@ -60,7 +60,7 @@ public class US_12_TC01_burcu extends TestBaseRapor {
 
         //10-Verify the visibility of the page.
         Assert.assertTrue(tripandwayPage.cultureTourSayfaGorunurluk.isDisplayed());
-        extentTest.info("Sayfanin gorunurlugunu dogrulayabilmeli");
+        extentTest.pass("Sayfanin gorunurlugu dogrulandi");
 
         //11- Click on the business tour under the services tab
         tripandwayPage.bussinessTourBolumu.sendKeys(Keys.ENTER);
@@ -68,7 +68,7 @@ public class US_12_TC01_burcu extends TestBaseRapor {
 
         //12-Verify the visibility of the page.
         Assert.assertTrue(tripandwayPage.bussinessTourSayfaGorunurluk.isDisplayed());
-        extentTest.info("Sayfanin gorunurlugunu dogrulayabilmeli");
+        extentTest.pass("Sayfanin gorunurlugu dogrulandi");
 
         //13- Click on the health tour under the services tab
         tripandwayPage.healthTourBolumu.sendKeys(Keys.ENTER);
@@ -76,7 +76,7 @@ public class US_12_TC01_burcu extends TestBaseRapor {
 
         //14-Verify the visibility of the page.
         Assert.assertTrue(tripandwayPage.healthTourSayfaGorunurluk.isDisplayed());
-        extentTest.info("Sayfanin gorunurlugunu dogrulayabilmeli");
+        extentTest.pass("Sayfanin gorunurlugu dogrulandi");
 
         //15- Click on the religious tour under the services tab
         tripandwayPage.religiousBolumu.sendKeys(Keys.ENTER);
@@ -84,7 +84,7 @@ public class US_12_TC01_burcu extends TestBaseRapor {
 
         //16-Verify the visibility of the page.
         Assert.assertTrue(tripandwayPage.religiousTourSayfaGorunurluk.isDisplayed());
-        extentTest.info("Sayfanin gorunurlugunu dogrulayabilmeli");
+        extentTest.pass("Sayfanin gorunurlugu dogrulandi");
 
 
 

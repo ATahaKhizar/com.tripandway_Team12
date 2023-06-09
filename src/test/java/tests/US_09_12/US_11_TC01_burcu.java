@@ -36,7 +36,7 @@ public class US_11_TC01_burcu extends TestBaseRapor {
 
         // 5-Verifies that the page is visible
         Assert.assertTrue(tripandwayPage.privacPolicyBolumGorunurlugu.isDisplayed());
-        extentTest.info("Sayfanin gorunurlugunu dogrulayabilmeli");
+        extentTest.pass("Sayfanin gorunurlu dogrulandi");
 
     }
 }
