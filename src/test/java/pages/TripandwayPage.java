@@ -985,6 +985,29 @@ public class TripandwayPage {
     public WebElement ourClient;
 
 
+    @FindBy(xpath = "//input [@name='traveller_name']")
+    public WebElement kullaniciKayitIsimKutusu;
+
+    @FindBy(xpath = "//input [@name='traveller_email']")
+    public WebElement kullaniciKayitEmailkutusu;
+
+    @FindBy(xpath = "//input [@name='traveller_password']")
+    public WebElement kullaniciKayitPasswordkutusu;
+
+    @FindBy(xpath = "//button [@type='submit']")
+    public WebElement kullaniciKayitMakeRegistrationButtonu;
+
+    @FindBy(xpath = "//div[@class='toast-message'")
+    public WebElement kullanciKayitRegistrationComplete;
+
+    @FindBy(xpath = "//a [@href='https://qa.tripandway.com/traveller/login']")
+    public WebElement homePageLoginElementi;
+
+    @FindBy(xpath = "//div[@class='banner-text']")
+    //Sayfada bulunan banner locate'i
+    public WebElement BannerKontrolElementi;
+
+
 
 
 }
